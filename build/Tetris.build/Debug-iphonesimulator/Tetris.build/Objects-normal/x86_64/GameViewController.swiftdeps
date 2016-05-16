@@ -1,0 +1,404 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GameViewController"
+provides-nominal:
+- "C6Tetris18GameViewController"
+provides-member:
+- ["C6Tetris18GameViewController", ""]
+provides-dynamic-lookup:
+- "supportedInterfaceOrientations"
+- "viewDidLoad"
+- "prefersStatusBarHidden"
+- "shouldAutorotate"
+- "gameScene"
+- "didReceiveMemoryWarning"
+depends-top-level:
+- !private "UIDevice"
+- !private "SKView"
+- "Bool"
+- !private "BooleanLiteralType"
+- "GameScene"
+- "GameViewController"
+- "UIViewController"
+- "UIInterfaceOrientationMask"
+- !private "=="
+depends-member:
+- !private ["Ps9AnyObject", "GameScene"]
+- !private ["Ps9AnyObject", "UIDevice"]
+- !private ["Ps9AnyObject", "bounds"]
+- !private ["Ps9AnyObject", "currentDevice"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "gameScene"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "multipleTouchEnabled"]
+- ["Ps9AnyObject", "prefersStatusBarHidden"]
+- !private ["Ps9AnyObject", "presentScene"]
+- ["Ps9AnyObject", "shouldAutorotate"]
+- ["Ps9AnyObject", "supportedInterfaceOrientations"]
+- !private ["Ps9AnyObject", "userInterfaceIdiom"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "All"]
+- !private ["Ps23ArrayLiteralConvertible", "AllButUpsideDown"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["VSC6CGRect", "size"]
+- !private ["Ps11CVarArgType", "GameScene"]
+- !private ["Ps11CVarArgType", "UIDevice"]
+- !private ["Ps11CVarArgType", "bounds"]
+- !private ["Ps11CVarArgType", "currentDevice"]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- ["Ps11CVarArgType", "gameScene"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "multipleTouchEnabled"]
+- ["Ps11CVarArgType", "prefersStatusBarHidden"]
+- !private ["Ps11CVarArgType", "presentScene"]
+- ["Ps11CVarArgType", "shouldAutorotate"]
+- ["Ps11CVarArgType", "supportedInterfaceOrientations"]
+- !private ["Ps11CVarArgType", "userInterfaceIdiom"]
+- !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "GameScene"]
+- !private ["Ps28CustomDebugStringConvertible", "UIDevice"]
+- !private ["Ps28CustomDebugStringConvertible", "bounds"]
+- !private ["Ps28CustomDebugStringConvertible", "currentDevice"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "gameScene"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "multipleTouchEnabled"]
+- ["Ps28CustomDebugStringConvertible", "prefersStatusBarHidden"]
+- !private ["Ps28CustomDebugStringConvertible", "presentScene"]
+- ["Ps28CustomDebugStringConvertible", "shouldAutorotate"]
+- ["Ps28CustomDebugStringConvertible", "supportedInterfaceOrientations"]
+- !private ["Ps28CustomDebugStringConvertible", "userInterfaceIdiom"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "GameScene"]
+- !private ["Ps23CustomStringConvertible", "UIDevice"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "bounds"]
+- !private ["Ps23CustomStringConvertible", "currentDevice"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "gameScene"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "multipleTouchEnabled"]
+- ["Ps23CustomStringConvertible", "prefersStatusBarHidden"]
+- !private ["Ps23CustomStringConvertible", "presentScene"]
+- ["Ps23CustomStringConvertible", "shouldAutorotate"]
+- ["Ps23CustomStringConvertible", "supportedInterfaceOrientations"]
+- !private ["Ps23CustomStringConvertible", "userInterfaceIdiom"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "All"]
+- !private ["Ps9Equatable", "AllButUpsideDown"]
+- !private ["Ps9Equatable", "GameScene"]
+- !private ["Ps9Equatable", "Phone"]
+- !private ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "UIDevice"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "bounds"]
+- !private ["Ps9Equatable", "currentDevice"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "gameScene"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "multipleTouchEnabled"]
+- ["Ps9Equatable", "prefersStatusBarHidden"]
+- !private ["Ps9Equatable", "presentScene"]
+- ["Ps9Equatable", "shouldAutorotate"]
+- !private ["Ps9Equatable", "size"]
+- ["Ps9Equatable", "supportedInterfaceOrientations"]
+- !private ["Ps9Equatable", "userInterfaceIdiom"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["C6Tetris9GameScene", "init"]
+- ["C6Tetris18GameViewController", "Bool"]
+- ["C6Tetris18GameViewController", "GameScene"]
+- !private ["C6Tetris18GameViewController", "SKView"]
+- !private ["C6Tetris18GameViewController", "UIDevice"]
+- ["C6Tetris18GameViewController", "UIInterfaceOrientationMask"]
+- ["C6Tetris18GameViewController", "deinit"]
+- ["C6Tetris18GameViewController", "didReceiveMemoryWarning"]
+- ["C6Tetris18GameViewController", "gameScene"]
+- ["C6Tetris18GameViewController", "init"]
+- ["C6Tetris18GameViewController", "prefersStatusBarHidden"]
+- ["C6Tetris18GameViewController", "shouldAutorotate"]
+- ["C6Tetris18GameViewController", "supportedInterfaceOrientations"]
+- !private ["C6Tetris18GameViewController", "view"]
+- ["C6Tetris18GameViewController", "viewDidLoad"]
+- !private ["Ps8Hashable", "GameScene"]
+- !private ["Ps8Hashable", "Phone"]
+- !private ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "UIDevice"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "bounds"]
+- !private ["Ps8Hashable", "currentDevice"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "gameScene"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "multipleTouchEnabled"]
+- ["Ps8Hashable", "prefersStatusBarHidden"]
+- !private ["Ps8Hashable", "presentScene"]
+- ["Ps8Hashable", "shouldAutorotate"]
+- ["Ps8Hashable", "supportedInterfaceOrientations"]
+- !private ["Ps8Hashable", "userInterfaceIdiom"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["PSo8NSCoding", "GameScene"]
+- !private ["PSo8NSCoding", "UIDevice"]
+- !private ["PSo8NSCoding", "bounds"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "gameScene"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "multipleTouchEnabled"]
+- ["PSo8NSCoding", "prefersStatusBarHidden"]
+- !private ["PSo8NSCoding", "presentScene"]
+- ["PSo8NSCoding", "shouldAutorotate"]
+- ["PSo8NSCoding", "supportedInterfaceOrientations"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "GameScene"]
+- !private ["PSo26NSExtensionRequestHandling", "UIDevice"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "gameScene"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "prefersStatusBarHidden"]
+- ["PSo26NSExtensionRequestHandling", "shouldAutorotate"]
+- ["PSo26NSExtensionRequestHandling", "supportedInterfaceOrientations"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "GameScene"]
+- !private ["CSo8NSObject", "SKView"]
+- !private ["CSo8NSObject", "UIDevice"]
+- ["CSo8NSObject", "UIInterfaceOrientationMask"]
+- !private ["CSo8NSObject", "bounds"]
+- !private ["CSo8NSObject", "currentDevice"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "gameScene"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "multipleTouchEnabled"]
+- ["CSo8NSObject", "prefersStatusBarHidden"]
+- !private ["CSo8NSObject", "presentScene"]
+- ["CSo8NSObject", "shouldAutorotate"]
+- ["CSo8NSObject", "supportedInterfaceOrientations"]
+- !private ["CSo8NSObject", "userInterfaceIdiom"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "GameScene"]
+- !private ["PSo16NSObjectProtocol", "UIDevice"]
+- !private ["PSo16NSObjectProtocol", "bounds"]
+- !private ["PSo16NSObjectProtocol", "currentDevice"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "gameScene"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "multipleTouchEnabled"]
+- ["PSo16NSObjectProtocol", "prefersStatusBarHidden"]
+- !private ["PSo16NSObjectProtocol", "presentScene"]
+- ["PSo16NSObjectProtocol", "shouldAutorotate"]
+- ["PSo16NSObjectProtocol", "supportedInterfaceOrientations"]
+- !private ["PSo16NSObjectProtocol", "userInterfaceIdiom"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Ps13OptionSetType", "All"]
+- !private ["Ps13OptionSetType", "AllButUpsideDown"]
+- !private ["Ps16RawRepresentable", "All"]
+- !private ["Ps16RawRepresentable", "AllButUpsideDown"]
+- !private ["Ps16RawRepresentable", "Phone"]
+- !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["CSo6SKView", "bounds"]
+- !private ["CSo6SKView", "multipleTouchEnabled"]
+- !private ["CSo6SKView", "presentScene"]
+- !private ["Ps14SetAlgebraType", "All"]
+- !private ["Ps14SetAlgebraType", "AllButUpsideDown"]
+- !private ["PSo29UIAccessibilityIdentification", "bounds"]
+- !private ["PSo29UIAccessibilityIdentification", "multipleTouchEnabled"]
+- !private ["PSo29UIAccessibilityIdentification", "presentScene"]
+- !private ["PSo12UIAppearance", "bounds"]
+- !private ["PSo12UIAppearance", "multipleTouchEnabled"]
+- !private ["PSo12UIAppearance", "presentScene"]
+- !private ["PSo21UIAppearanceContainer", "GameScene"]
+- !private ["PSo21UIAppearanceContainer", "UIDevice"]
+- !private ["PSo21UIAppearanceContainer", "bounds"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "gameScene"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "multipleTouchEnabled"]
+- ["PSo21UIAppearanceContainer", "prefersStatusBarHidden"]
+- !private ["PSo21UIAppearanceContainer", "presentScene"]
+- ["PSo21UIAppearanceContainer", "shouldAutorotate"]
+- ["PSo21UIAppearanceContainer", "supportedInterfaceOrientations"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "GameScene"]
+- !private ["PSo18UIContentContainer", "UIDevice"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "gameScene"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "prefersStatusBarHidden"]
+- ["PSo18UIContentContainer", "shouldAutorotate"]
+- ["PSo18UIContentContainer", "supportedInterfaceOrientations"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "bounds"]
+- !private ["PSo17UICoordinateSpace", "multipleTouchEnabled"]
+- !private ["PSo17UICoordinateSpace", "presentScene"]
+- !private ["CSo8UIDevice", "currentDevice"]
+- !private ["CSo8UIDevice", "userInterfaceIdiom"]
+- !private ["PSo13UIDynamicItem", "bounds"]
+- !private ["PSo13UIDynamicItem", "multipleTouchEnabled"]
+- !private ["PSo13UIDynamicItem", "presentScene"]
+- !private ["PSo18UIFocusEnvironment", "GameScene"]
+- !private ["PSo18UIFocusEnvironment", "UIDevice"]
+- !private ["PSo18UIFocusEnvironment", "bounds"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "gameScene"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "multipleTouchEnabled"]
+- ["PSo18UIFocusEnvironment", "prefersStatusBarHidden"]
+- !private ["PSo18UIFocusEnvironment", "presentScene"]
+- ["PSo18UIFocusEnvironment", "shouldAutorotate"]
+- ["PSo18UIFocusEnvironment", "supportedInterfaceOrientations"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["VSC26UIInterfaceOrientationMask", "All"]
+- !private ["VSC26UIInterfaceOrientationMask", "AllButUpsideDown"]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "GameScene"]
+- !private ["CSo11UIResponder", "SKView"]
+- !private ["CSo11UIResponder", "UIDevice"]
+- ["CSo11UIResponder", "UIInterfaceOrientationMask"]
+- !private ["CSo11UIResponder", "bounds"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "gameScene"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "multipleTouchEnabled"]
+- ["CSo11UIResponder", "prefersStatusBarHidden"]
+- !private ["CSo11UIResponder", "presentScene"]
+- ["CSo11UIResponder", "shouldAutorotate"]
+- ["CSo11UIResponder", "supportedInterfaceOrientations"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "GameScene"]
+- !private ["PSo16UIStateRestoring", "UIDevice"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "gameScene"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "prefersStatusBarHidden"]
+- ["PSo16UIStateRestoring", "shouldAutorotate"]
+- ["PSo16UIStateRestoring", "supportedInterfaceOrientations"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "GameScene"]
+- !private ["PSo18UITraitEnvironment", "UIDevice"]
+- !private ["PSo18UITraitEnvironment", "bounds"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "gameScene"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "multipleTouchEnabled"]
+- ["PSo18UITraitEnvironment", "prefersStatusBarHidden"]
+- !private ["PSo18UITraitEnvironment", "presentScene"]
+- ["PSo18UITraitEnvironment", "shouldAutorotate"]
+- ["PSo18UITraitEnvironment", "supportedInterfaceOrientations"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["OSC20UIUserInterfaceIdiom", "Phone"]
+- !private ["OSC20UIUserInterfaceIdiom", "RawValue"]
+- !private ["OSC20UIUserInterfaceIdiom", "deinit"]
+- !private ["CSo6UIView", "bounds"]
+- !private ["CSo6UIView", "deinit"]
+- !private ["CSo6UIView", "multipleTouchEnabled"]
+- !private ["CSo6UIView", "presentScene"]
+- ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "GameScene"]
+- !private ["CSo16UIViewController", "SKView"]
+- !private ["CSo16UIViewController", "UIDevice"]
+- ["CSo16UIViewController", "UIInterfaceOrientationMask"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "gameScene"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "prefersStatusBarHidden"]
+- ["CSo16UIViewController", "shouldAutorotate"]
+- ["CSo16UIViewController", "supportedInterfaceOrientations"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "bounds"]
+- !private ["Ps12_Reflectable", "multipleTouchEnabled"]
+- !private ["Ps12_Reflectable", "presentScene"]
+- !private ["Ps12_Reflectable", "size"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "VSC6CGRect"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "C6Tetris9GameScene"
+- "C6Tetris18GameViewController"
+- "Ps8Hashable"
+- !private "SQ"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Ps13OptionSetType"
+- !private "Ps16RawRepresentable"
+- !private "CSo6SKView"
+- !private "Ps14SetAlgebraType"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "CSo8UIDevice"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "VSC26UIInterfaceOrientationMask"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "OSC20UIUserInterfaceIdiom"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+interface-hash: "af1c1b4bffe0026ef7652b6bf3d125c5"
