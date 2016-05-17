@@ -1,46 +1,62 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "TickLevelOne"
 - "GameScene"
 provides-nominal:
 - "C6Tetris9GameScene"
 provides-member:
 - ["C6Tetris9GameScene", ""]
 provides-dynamic-lookup:
-- "touchesBegan"
-- "update"
 - "didMoveToView"
+- "lastTick"
+- "tick"
+- "touchesBegan"
+- "stopTicking"
+- "update"
+- "tickLength"
+- "startTicking"
 depends-top-level:
-- "SKScene"
-- "SKView"
-- "CFTimeInterval"
-- !private "CGRectGetMidX"
-- !private "CGPoint"
-- "NSCoder"
-- "Set"
-- "UITouch"
-- !private "SKLabelNode"
 - "GameScene"
-- !private "SKAction"
-- !private "SKSpriteNode"
-- !private "M_PI"
+- "FloatLiteralType"
+- !private ">"
 - "UIEvent"
 - !private "fatalError"
-- !private "CGFloat"
+- !private "M_PI"
+- "SKScene"
+- !private "*"
+- !private "!="
+- !private "SKLabelNode"
+- !private "CGRectGetMidX"
+- "NSDate"
+- !private "SKSpriteNode"
+- !private "CGPoint"
+- "SKView"
+- "TickLevelOne"
+- "CFTimeInterval"
+- !private "SKAction"
 - !private "StringLiteralType"
+- !private "CGFloat"
+- "NSTimeInterval"
+- "NSCoder"
 - !private "CGRectGetMidY"
 - "CGSize"
+- "IntegerLiteralType"
+- "Set"
 - !private "CGPointMake"
+- "UITouch"
 depends-member:
-- !private ["Ps16AbsoluteValuable", "init"]
+- ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGFloat"]
 - !private ["Ps9AnyObject", "CGPoint"]
 - !private ["Ps9AnyObject", "CGPointMake"]
 - !private ["Ps9AnyObject", "CGRectGetMidX"]
 - !private ["Ps9AnyObject", "CGRectGetMidY"]
 - !private ["Ps9AnyObject", "M_PI"]
+- !private ["Ps9AnyObject", "NSDate"]
 - !private ["Ps9AnyObject", "SKAction"]
 - !private ["Ps9AnyObject", "SKLabelNode"]
 - !private ["Ps9AnyObject", "SKSpriteNode"]
+- ["Ps9AnyObject", "TickLevelOne"]
 - !private ["Ps9AnyObject", "addChild"]
 - !private ["Ps9AnyObject", "anchorPoint"]
 - ["Ps9AnyObject", "didMoveToView"]
@@ -48,18 +64,27 @@ depends-member:
 - !private ["Ps9AnyObject", "fontSize"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "lastTick"]
 - !private ["Ps9AnyObject", "locationInNode"]
 - !private ["Ps9AnyObject", "position"]
 - !private ["Ps9AnyObject", "repeatActionForever"]
 - !private ["Ps9AnyObject", "rotateByAngle"]
 - !private ["Ps9AnyObject", "runAction"]
+- ["Ps9AnyObject", "startTicking"]
+- ["Ps9AnyObject", "stopTicking"]
 - !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", "tick"]
+- ["Ps9AnyObject", "tickLength"]
+- !private ["Ps9AnyObject", "timeIntervalSinceNow"]
 - ["Ps9AnyObject", "touchesBegan"]
 - ["Ps9AnyObject", "update"]
 - !private ["Ps9AnyObject", "xScale"]
 - !private ["Ps9AnyObject", "yScale"]
 - ["Ps9AnyObject", ""]
 - !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["V12CoreGraphics7CGFloat", "init"]
 - !private ["VSC7CGPoint", "init"]
@@ -69,9 +94,11 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGRectGetMidX"]
 - !private ["Ps11CVarArgType", "CGRectGetMidY"]
 - !private ["Ps11CVarArgType", "M_PI"]
+- !private ["Ps11CVarArgType", "NSDate"]
 - !private ["Ps11CVarArgType", "SKAction"]
 - !private ["Ps11CVarArgType", "SKLabelNode"]
 - !private ["Ps11CVarArgType", "SKSpriteNode"]
+- ["Ps11CVarArgType", "TickLevelOne"]
 - !private ["Ps11CVarArgType", "addChild"]
 - !private ["Ps11CVarArgType", "anchorPoint"]
 - ["Ps11CVarArgType", "didMoveToView"]
@@ -79,19 +106,25 @@ depends-member:
 - !private ["Ps11CVarArgType", "fontSize"]
 - !private ["Ps11CVarArgType", "frame"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "lastTick"]
 - !private ["Ps11CVarArgType", "locationInNode"]
 - !private ["Ps11CVarArgType", "position"]
 - !private ["Ps11CVarArgType", "repeatActionForever"]
 - !private ["Ps11CVarArgType", "rotateByAngle"]
 - !private ["Ps11CVarArgType", "runAction"]
+- ["Ps11CVarArgType", "startTicking"]
+- ["Ps11CVarArgType", "stopTicking"]
 - !private ["Ps11CVarArgType", "text"]
+- ["Ps11CVarArgType", "tick"]
+- ["Ps11CVarArgType", "tickLength"]
+- !private ["Ps11CVarArgType", "timeIntervalSinceNow"]
 - ["Ps11CVarArgType", "touchesBegan"]
 - ["Ps11CVarArgType", "update"]
 - !private ["Ps11CVarArgType", "xScale"]
 - !private ["Ps11CVarArgType", "yScale"]
 - ["Ps11CVarArgType", ""]
 - !private ["Ps14CollectionType", "Generator"]
-- !private ["Ps10Comparable", "init"]
+- ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPointMake"]
@@ -99,9 +132,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGRectGetMidY"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "M_PI"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDate"]
 - !private ["Ps28CustomDebugStringConvertible", "SKAction"]
 - !private ["Ps28CustomDebugStringConvertible", "SKLabelNode"]
 - !private ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- ["Ps28CustomDebugStringConvertible", "TickLevelOne"]
 - !private ["Ps28CustomDebugStringConvertible", "addChild"]
 - !private ["Ps28CustomDebugStringConvertible", "anchorPoint"]
 - ["Ps28CustomDebugStringConvertible", "didMoveToView"]
@@ -109,12 +145,18 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "fontSize"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "lastTick"]
 - !private ["Ps28CustomDebugStringConvertible", "locationInNode"]
 - !private ["Ps28CustomDebugStringConvertible", "position"]
 - !private ["Ps28CustomDebugStringConvertible", "repeatActionForever"]
 - !private ["Ps28CustomDebugStringConvertible", "rotateByAngle"]
 - !private ["Ps28CustomDebugStringConvertible", "runAction"]
+- ["Ps28CustomDebugStringConvertible", "startTicking"]
+- ["Ps28CustomDebugStringConvertible", "stopTicking"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- ["Ps28CustomDebugStringConvertible", "tick"]
+- ["Ps28CustomDebugStringConvertible", "tickLength"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSinceNow"]
 - ["Ps28CustomDebugStringConvertible", "touchesBegan"]
 - ["Ps28CustomDebugStringConvertible", "update"]
 - !private ["Ps28CustomDebugStringConvertible", "xScale"]
@@ -127,9 +169,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGRectGetMidY"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "M_PI"]
+- !private ["Ps23CustomStringConvertible", "NSDate"]
 - !private ["Ps23CustomStringConvertible", "SKAction"]
 - !private ["Ps23CustomStringConvertible", "SKLabelNode"]
 - !private ["Ps23CustomStringConvertible", "SKSpriteNode"]
+- ["Ps23CustomStringConvertible", "TickLevelOne"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addChild"]
 - !private ["Ps23CustomStringConvertible", "anchorPoint"]
 - ["Ps23CustomStringConvertible", "didMoveToView"]
@@ -137,17 +182,24 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "fontSize"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "lastTick"]
 - !private ["Ps23CustomStringConvertible", "locationInNode"]
 - !private ["Ps23CustomStringConvertible", "position"]
 - !private ["Ps23CustomStringConvertible", "repeatActionForever"]
 - !private ["Ps23CustomStringConvertible", "rotateByAngle"]
 - !private ["Ps23CustomStringConvertible", "runAction"]
+- ["Ps23CustomStringConvertible", "startTicking"]
+- ["Ps23CustomStringConvertible", "stopTicking"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- ["Ps23CustomStringConvertible", "tick"]
+- ["Ps23CustomStringConvertible", "tickLength"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSinceNow"]
 - ["Ps23CustomStringConvertible", "touchesBegan"]
 - ["Ps23CustomStringConvertible", "update"]
 - !private ["Ps23CustomStringConvertible", "xScale"]
 - !private ["Ps23CustomStringConvertible", "yScale"]
 - ["Ps23CustomStringConvertible", ""]
+- ["Sd", "init"]
 - !private ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "CGPoint"]
 - !private ["Ps9Equatable", "CGPointMake"]
@@ -155,9 +207,12 @@ depends-member:
 - !private ["Ps9Equatable", "CGRectGetMidY"]
 - !private ["Ps9Equatable", "Generator"]
 - !private ["Ps9Equatable", "M_PI"]
+- !private ["Ps9Equatable", "NSDate"]
 - !private ["Ps9Equatable", "SKAction"]
 - !private ["Ps9Equatable", "SKLabelNode"]
 - !private ["Ps9Equatable", "SKSpriteNode"]
+- ["Ps9Equatable", "TickLevelOne"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addChild"]
 - !private ["Ps9Equatable", "anchorPoint"]
 - ["Ps9Equatable", "didMoveToView"]
@@ -165,19 +220,25 @@ depends-member:
 - !private ["Ps9Equatable", "fontSize"]
 - !private ["Ps9Equatable", "frame"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "lastTick"]
 - !private ["Ps9Equatable", "locationInNode"]
 - !private ["Ps9Equatable", "position"]
 - !private ["Ps9Equatable", "repeatActionForever"]
 - !private ["Ps9Equatable", "rotateByAngle"]
 - !private ["Ps9Equatable", "runAction"]
+- ["Ps9Equatable", "startTicking"]
+- ["Ps9Equatable", "stopTicking"]
 - !private ["Ps9Equatable", "text"]
+- ["Ps9Equatable", "tick"]
+- ["Ps9Equatable", "tickLength"]
+- !private ["Ps9Equatable", "timeIntervalSinceNow"]
 - ["Ps9Equatable", "touchesBegan"]
 - ["Ps9Equatable", "update"]
 - !private ["Ps9Equatable", "xScale"]
 - !private ["Ps9Equatable", "yScale"]
 - ["Ps9Equatable", ""]
-- !private ["Ps23FloatLiteralConvertible", "init"]
-- !private ["Ps17FloatingPointType", "init"]
+- ["Ps23FloatLiteralConvertible", "init"]
+- ["Ps17FloatingPointType", "init"]
 - ["C6Tetris9GameScene", "CFTimeInterval"]
 - !private ["C6Tetris9GameScene", "CGFloat"]
 - !private ["C6Tetris9GameScene", "CGPoint"]
@@ -187,11 +248,13 @@ depends-member:
 - ["C6Tetris9GameScene", "CGSize"]
 - !private ["C6Tetris9GameScene", "M_PI"]
 - ["C6Tetris9GameScene", "NSCoder"]
+- ["C6Tetris9GameScene", "NSDate"]
 - !private ["C6Tetris9GameScene", "SKAction"]
 - !private ["C6Tetris9GameScene", "SKLabelNode"]
 - !private ["C6Tetris9GameScene", "SKSpriteNode"]
 - ["C6Tetris9GameScene", "SKView"]
 - ["C6Tetris9GameScene", "Set"]
+- ["C6Tetris9GameScene", "TickLevelOne"]
 - ["C6Tetris9GameScene", "UIEvent"]
 - ["C6Tetris9GameScene", "UITouch"]
 - !private ["C6Tetris9GameScene", "addChild"]
@@ -201,6 +264,11 @@ depends-member:
 - !private ["C6Tetris9GameScene", "fatalError"]
 - !private ["C6Tetris9GameScene", "frame"]
 - ["C6Tetris9GameScene", "init"]
+- ["C6Tetris9GameScene", "lastTick"]
+- ["C6Tetris9GameScene", "startTicking"]
+- ["C6Tetris9GameScene", "stopTicking"]
+- ["C6Tetris9GameScene", "tick"]
+- ["C6Tetris9GameScene", "tickLength"]
 - ["C6Tetris9GameScene", "touchesBegan"]
 - ["C6Tetris9GameScene", "update"]
 - !private ["Ps13GeneratorType", "Element"]
@@ -211,9 +279,12 @@ depends-member:
 - !private ["Ps8Hashable", "CGRectGetMidY"]
 - !private ["Ps8Hashable", "Generator"]
 - !private ["Ps8Hashable", "M_PI"]
+- !private ["Ps8Hashable", "NSDate"]
 - !private ["Ps8Hashable", "SKAction"]
 - !private ["Ps8Hashable", "SKLabelNode"]
 - !private ["Ps8Hashable", "SKSpriteNode"]
+- ["Ps8Hashable", "TickLevelOne"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addChild"]
 - !private ["Ps8Hashable", "anchorPoint"]
 - ["Ps8Hashable", "didMoveToView"]
@@ -221,28 +292,36 @@ depends-member:
 - !private ["Ps8Hashable", "fontSize"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "lastTick"]
 - !private ["Ps8Hashable", "locationInNode"]
 - !private ["Ps8Hashable", "position"]
 - !private ["Ps8Hashable", "repeatActionForever"]
 - !private ["Ps8Hashable", "rotateByAngle"]
 - !private ["Ps8Hashable", "runAction"]
+- ["Ps8Hashable", "startTicking"]
+- ["Ps8Hashable", "stopTicking"]
 - !private ["Ps8Hashable", "text"]
+- ["Ps8Hashable", "tick"]
+- ["Ps8Hashable", "tickLength"]
+- !private ["Ps8Hashable", "timeIntervalSinceNow"]
 - ["Ps8Hashable", "touchesBegan"]
 - ["Ps8Hashable", "update"]
 - !private ["Ps8Hashable", "xScale"]
 - !private ["Ps8Hashable", "yScale"]
 - ["Ps8Hashable", ""]
 - !private ["Ps9Indexable", "Generator"]
-- !private ["Ps25IntegerLiteralConvertible", "init"]
+- ["Ps25IntegerLiteralConvertible", "init"]
 - !private ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "CGPoint"]
 - !private ["PSo8NSCoding", "CGPointMake"]
 - !private ["PSo8NSCoding", "CGRectGetMidX"]
 - !private ["PSo8NSCoding", "CGRectGetMidY"]
 - !private ["PSo8NSCoding", "M_PI"]
+- !private ["PSo8NSCoding", "NSDate"]
 - !private ["PSo8NSCoding", "SKAction"]
 - !private ["PSo8NSCoding", "SKLabelNode"]
 - !private ["PSo8NSCoding", "SKSpriteNode"]
+- ["PSo8NSCoding", "TickLevelOne"]
 - !private ["PSo8NSCoding", "addChild"]
 - !private ["PSo8NSCoding", "anchorPoint"]
 - ["PSo8NSCoding", "didMoveToView"]
@@ -250,11 +329,17 @@ depends-member:
 - !private ["PSo8NSCoding", "fontSize"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "lastTick"]
 - !private ["PSo8NSCoding", "position"]
 - !private ["PSo8NSCoding", "repeatActionForever"]
 - !private ["PSo8NSCoding", "rotateByAngle"]
 - !private ["PSo8NSCoding", "runAction"]
+- ["PSo8NSCoding", "startTicking"]
+- ["PSo8NSCoding", "stopTicking"]
 - !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "tick"]
+- ["PSo8NSCoding", "tickLength"]
+- !private ["PSo8NSCoding", "timeIntervalSinceNow"]
 - ["PSo8NSCoding", "touchesBegan"]
 - ["PSo8NSCoding", "update"]
 - !private ["PSo8NSCoding", "xScale"]
@@ -266,9 +351,11 @@ depends-member:
 - !private ["PSo9NSCopying", "CGRectGetMidX"]
 - !private ["PSo9NSCopying", "CGRectGetMidY"]
 - !private ["PSo9NSCopying", "M_PI"]
+- !private ["PSo9NSCopying", "NSDate"]
 - !private ["PSo9NSCopying", "SKAction"]
 - !private ["PSo9NSCopying", "SKLabelNode"]
 - !private ["PSo9NSCopying", "SKSpriteNode"]
+- ["PSo9NSCopying", "TickLevelOne"]
 - !private ["PSo9NSCopying", "addChild"]
 - !private ["PSo9NSCopying", "anchorPoint"]
 - ["PSo9NSCopying", "didMoveToView"]
@@ -276,16 +363,24 @@ depends-member:
 - !private ["PSo9NSCopying", "fontSize"]
 - !private ["PSo9NSCopying", "frame"]
 - ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "lastTick"]
 - !private ["PSo9NSCopying", "position"]
 - !private ["PSo9NSCopying", "repeatActionForever"]
 - !private ["PSo9NSCopying", "rotateByAngle"]
 - !private ["PSo9NSCopying", "runAction"]
+- ["PSo9NSCopying", "startTicking"]
+- ["PSo9NSCopying", "stopTicking"]
 - !private ["PSo9NSCopying", "text"]
+- ["PSo9NSCopying", "tick"]
+- ["PSo9NSCopying", "tickLength"]
+- !private ["PSo9NSCopying", "timeIntervalSinceNow"]
 - ["PSo9NSCopying", "touchesBegan"]
 - ["PSo9NSCopying", "update"]
 - !private ["PSo9NSCopying", "xScale"]
 - !private ["PSo9NSCopying", "yScale"]
 - ["PSo9NSCopying", ""]
+- !private ["CSo6NSDate", "init"]
+- !private ["CSo6NSDate", "timeIntervalSinceNow"]
 - ["CSo8NSObject", "CFTimeInterval"]
 - !private ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CGPoint"]
@@ -295,11 +390,13 @@ depends-member:
 - ["CSo8NSObject", "CGSize"]
 - !private ["CSo8NSObject", "M_PI"]
 - ["CSo8NSObject", "NSCoder"]
+- ["CSo8NSObject", "NSDate"]
 - !private ["CSo8NSObject", "SKAction"]
 - !private ["CSo8NSObject", "SKLabelNode"]
 - !private ["CSo8NSObject", "SKSpriteNode"]
 - ["CSo8NSObject", "SKView"]
 - ["CSo8NSObject", "Set"]
+- ["CSo8NSObject", "TickLevelOne"]
 - ["CSo8NSObject", "UIEvent"]
 - ["CSo8NSObject", "UITouch"]
 - !private ["CSo8NSObject", "addChild"]
@@ -309,12 +406,18 @@ depends-member:
 - !private ["CSo8NSObject", "fontSize"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "lastTick"]
 - !private ["CSo8NSObject", "locationInNode"]
 - !private ["CSo8NSObject", "position"]
 - !private ["CSo8NSObject", "repeatActionForever"]
 - !private ["CSo8NSObject", "rotateByAngle"]
 - !private ["CSo8NSObject", "runAction"]
+- ["CSo8NSObject", "startTicking"]
+- ["CSo8NSObject", "stopTicking"]
 - !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "tick"]
+- ["CSo8NSObject", "tickLength"]
+- !private ["CSo8NSObject", "timeIntervalSinceNow"]
 - ["CSo8NSObject", "touchesBegan"]
 - ["CSo8NSObject", "update"]
 - !private ["CSo8NSObject", "xScale"]
@@ -325,9 +428,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidX"]
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidY"]
 - !private ["PSo16NSObjectProtocol", "M_PI"]
+- !private ["PSo16NSObjectProtocol", "NSDate"]
 - !private ["PSo16NSObjectProtocol", "SKAction"]
 - !private ["PSo16NSObjectProtocol", "SKLabelNode"]
 - !private ["PSo16NSObjectProtocol", "SKSpriteNode"]
+- ["PSo16NSObjectProtocol", "TickLevelOne"]
 - !private ["PSo16NSObjectProtocol", "addChild"]
 - !private ["PSo16NSObjectProtocol", "anchorPoint"]
 - ["PSo16NSObjectProtocol", "didMoveToView"]
@@ -335,17 +440,27 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "fontSize"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "lastTick"]
 - !private ["PSo16NSObjectProtocol", "locationInNode"]
 - !private ["PSo16NSObjectProtocol", "position"]
 - !private ["PSo16NSObjectProtocol", "repeatActionForever"]
 - !private ["PSo16NSObjectProtocol", "rotateByAngle"]
 - !private ["PSo16NSObjectProtocol", "runAction"]
+- ["PSo16NSObjectProtocol", "startTicking"]
+- ["PSo16NSObjectProtocol", "stopTicking"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", "tick"]
+- ["PSo16NSObjectProtocol", "tickLength"]
+- !private ["PSo16NSObjectProtocol", "timeIntervalSinceNow"]
 - ["PSo16NSObjectProtocol", "touchesBegan"]
 - ["PSo16NSObjectProtocol", "update"]
 - !private ["PSo16NSObjectProtocol", "xScale"]
 - !private ["PSo16NSObjectProtocol", "yScale"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "timeIntervalSinceNow"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["CSo8SKAction", "repeatActionForever"]
 - !private ["CSo8SKAction", "rotateByAngle"]
@@ -358,11 +473,13 @@ depends-member:
 - ["CSo12SKEffectNode", "CGSize"]
 - !private ["CSo12SKEffectNode", "M_PI"]
 - ["CSo12SKEffectNode", "NSCoder"]
+- ["CSo12SKEffectNode", "NSDate"]
 - !private ["CSo12SKEffectNode", "SKAction"]
 - !private ["CSo12SKEffectNode", "SKLabelNode"]
 - !private ["CSo12SKEffectNode", "SKSpriteNode"]
 - ["CSo12SKEffectNode", "SKView"]
 - ["CSo12SKEffectNode", "Set"]
+- ["CSo12SKEffectNode", "TickLevelOne"]
 - ["CSo12SKEffectNode", "UIEvent"]
 - ["CSo12SKEffectNode", "UITouch"]
 - !private ["CSo12SKEffectNode", "addChild"]
@@ -371,6 +488,11 @@ depends-member:
 - !private ["CSo12SKEffectNode", "fatalError"]
 - !private ["CSo12SKEffectNode", "frame"]
 - ["CSo12SKEffectNode", "init"]
+- ["CSo12SKEffectNode", "lastTick"]
+- ["CSo12SKEffectNode", "startTicking"]
+- ["CSo12SKEffectNode", "stopTicking"]
+- ["CSo12SKEffectNode", "tick"]
+- ["CSo12SKEffectNode", "tickLength"]
 - ["CSo12SKEffectNode", "touchesBegan"]
 - ["CSo12SKEffectNode", "update"]
 - !private ["CSo11SKLabelNode", "fontSize"]
@@ -386,11 +508,13 @@ depends-member:
 - ["CSo6SKNode", "CGSize"]
 - !private ["CSo6SKNode", "M_PI"]
 - ["CSo6SKNode", "NSCoder"]
+- ["CSo6SKNode", "NSDate"]
 - !private ["CSo6SKNode", "SKAction"]
 - !private ["CSo6SKNode", "SKLabelNode"]
 - !private ["CSo6SKNode", "SKSpriteNode"]
 - ["CSo6SKNode", "SKView"]
 - ["CSo6SKNode", "Set"]
+- ["CSo6SKNode", "TickLevelOne"]
 - ["CSo6SKNode", "UIEvent"]
 - ["CSo6SKNode", "UITouch"]
 - !private ["CSo6SKNode", "addChild"]
@@ -400,9 +524,14 @@ depends-member:
 - !private ["CSo6SKNode", "fontSize"]
 - !private ["CSo6SKNode", "frame"]
 - ["CSo6SKNode", "init"]
+- ["CSo6SKNode", "lastTick"]
 - !private ["CSo6SKNode", "position"]
 - !private ["CSo6SKNode", "runAction"]
+- ["CSo6SKNode", "startTicking"]
+- ["CSo6SKNode", "stopTicking"]
 - !private ["CSo6SKNode", "text"]
+- ["CSo6SKNode", "tick"]
+- ["CSo6SKNode", "tickLength"]
 - ["CSo6SKNode", "touchesBegan"]
 - ["CSo6SKNode", "update"]
 - !private ["CSo6SKNode", "xScale"]
@@ -416,11 +545,13 @@ depends-member:
 - ["CSo7SKScene", "CGSize"]
 - !private ["CSo7SKScene", "M_PI"]
 - ["CSo7SKScene", "NSCoder"]
+- ["CSo7SKScene", "NSDate"]
 - !private ["CSo7SKScene", "SKAction"]
 - !private ["CSo7SKScene", "SKLabelNode"]
 - !private ["CSo7SKScene", "SKSpriteNode"]
 - ["CSo7SKScene", "SKView"]
 - ["CSo7SKScene", "Set"]
+- ["CSo7SKScene", "TickLevelOne"]
 - ["CSo7SKScene", "UIEvent"]
 - ["CSo7SKScene", "UITouch"]
 - !private ["CSo7SKScene", "addChild"]
@@ -429,6 +560,11 @@ depends-member:
 - !private ["CSo7SKScene", "fatalError"]
 - !private ["CSo7SKScene", "frame"]
 - ["CSo7SKScene", "init"]
+- ["CSo7SKScene", "lastTick"]
+- ["CSo7SKScene", "startTicking"]
+- ["CSo7SKScene", "stopTicking"]
+- ["CSo7SKScene", "tick"]
+- ["CSo7SKScene", "tickLength"]
 - ["CSo7SKScene", "touchesBegan"]
 - ["CSo7SKScene", "update"]
 - ["CSo7SKScene", ""]
@@ -441,9 +577,9 @@ depends-member:
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Vs3Set", "Generator"]
 - !private ["Vs12SetGenerator", "Element"]
-- !private ["Ps16SignedNumberType", "init"]
+- ["Ps16SignedNumberType", "init"]
 - !private ["Vs12StaticString", "deinit"]
-- !private ["Ps10Strideable", "init"]
+- ["Ps10Strideable", "init"]
 - ["CSo11UIResponder", "CFTimeInterval"]
 - !private ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "CGPoint"]
@@ -453,11 +589,13 @@ depends-member:
 - ["CSo11UIResponder", "CGSize"]
 - !private ["CSo11UIResponder", "M_PI"]
 - ["CSo11UIResponder", "NSCoder"]
+- ["CSo11UIResponder", "NSDate"]
 - !private ["CSo11UIResponder", "SKAction"]
 - !private ["CSo11UIResponder", "SKLabelNode"]
 - !private ["CSo11UIResponder", "SKSpriteNode"]
 - ["CSo11UIResponder", "SKView"]
 - ["CSo11UIResponder", "Set"]
+- ["CSo11UIResponder", "TickLevelOne"]
 - ["CSo11UIResponder", "UIEvent"]
 - ["CSo11UIResponder", "UITouch"]
 - !private ["CSo11UIResponder", "addChild"]
@@ -467,49 +605,68 @@ depends-member:
 - !private ["CSo11UIResponder", "fontSize"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "lastTick"]
 - !private ["CSo11UIResponder", "position"]
 - !private ["CSo11UIResponder", "runAction"]
+- ["CSo11UIResponder", "startTicking"]
+- ["CSo11UIResponder", "stopTicking"]
 - !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "tick"]
+- ["CSo11UIResponder", "tickLength"]
 - ["CSo11UIResponder", "touchesBegan"]
 - ["CSo11UIResponder", "update"]
 - !private ["CSo11UIResponder", "xScale"]
 - !private ["CSo11UIResponder", "yScale"]
 - !private ["CSo7UITouch", "locationInNode"]
-- !private ["Ps19_CVarArgAlignedType", "init"]
-- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["Ps31_BuiltinFloatLiteralConvertible", "init"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- ["Ps19_CVarArgAlignedType", "init"]
+- ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "Generator"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps12_Reflectable", "Generator"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "anchorPoint"]
-- !private ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "position"]
 - !private ["Ps12_Reflectable", "runAction"]
+- !private ["Ps12_Reflectable", "timeIntervalSinceNow"]
 - !private ["Ps12_Reflectable", "xScale"]
 - !private ["Ps12_Reflectable", "yScale"]
 depends-nominal:
-- !private "Ps16AbsoluteValuable"
+- "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
 - !private "Ps23ArrayLiteralConvertible"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
 - !private "V12CoreGraphics7CGFloat"
 - !private "VSC7CGPoint"
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
-- !private "Ps10Comparable"
+- "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- "Sd"
 - "Ps9Equatable"
-- !private "Ps23FloatLiteralConvertible"
-- !private "Ps17FloatingPointType"
+- "Ps23FloatLiteralConvertible"
+- "Ps17FloatingPointType"
 - "C6Tetris9GameScene"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
 - !private "Ps9Indexable"
-- !private "Ps25IntegerLiteralConvertible"
+- "Ps25IntegerLiteralConvertible"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
+- !private "CSo6NSDate"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "Sq"
+- !private "PSo14NSSecureCoding"
+- "Ps21NilLiteralConvertible"
+- "Sq"
 - !private "CSo8SKAction"
 - "CSo12SKEffectNode"
 - !private "CSo11SKLabelNode"
@@ -519,15 +676,18 @@ depends-nominal:
 - !private "Ps12SequenceType"
 - !private "Vs3Set"
 - !private "Vs12SetGenerator"
-- !private "Ps16SignedNumberType"
+- "Ps16SignedNumberType"
 - !private "Vs12StaticString"
-- !private "Ps10Strideable"
+- "Ps10Strideable"
 - "CSo11UIResponder"
 - !private "CSo7UITouch"
-- !private "Ps19_CVarArgAlignedType"
-- !private "Ps22_CVarArgPassedAsDouble"
-- !private "Ps21_ObjectiveCBridgeable"
-- !private "Ps12_Reflectable"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- "Ps31_BuiltinFloatLiteralConvertible"
+- "Ps33_BuiltinIntegerLiteralConvertible"
+- "Ps19_CVarArgAlignedType"
+- "Ps22_CVarArgPassedAsDouble"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -541,4 +701,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "d49c06ca1e408ebe976730111465d0ac"
+interface-hash: "d9783667ae419908dac5926ba8910ecd"

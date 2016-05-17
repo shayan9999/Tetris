@@ -94,6 +94,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import SpriteKit;
+@import Foundation;
 @import CoreGraphics;
 @import CoreFoundation;
 #endif
@@ -116,6 +117,7 @@ SWIFT_CLASS("_TtC6Tetris11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSDate;
 @class NSCoder;
 @class SKView;
 @class UITouch;
@@ -123,11 +125,16 @@ SWIFT_CLASS("_TtC6Tetris11AppDelegate")
 
 SWIFT_CLASS("_TtC6Tetris9GameScene")
 @interface GameScene : SKScene
+@property (nonatomic, copy) void (^ _Nullable tick)(void);
+@property (nonatomic) NSTimeInterval tickLength;
+@property (nonatomic, strong) NSDate * _Nullable lastTick;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aCoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
+- (void)update:(CFTimeInterval)currentTime;
+- (void)startTicking;
+- (void)stopTicking;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)update:(CFTimeInterval)currentTime;
 @end
 
 @class NSBundle;

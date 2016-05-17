@@ -8,7 +8,14 @@
 
 import SpriteKit
 
+
+let TickLevelOne        = NSTimeInterval(600);
+
 class GameScene: SKScene {
+    
+    var tick: (() -> ())? // function pointer - can be nil and should return nothing and take no parameters
+    var tickLength  = TickLevelOne // tickLength which I will change based on time
+    var lastTick: NSDate? // used in comparision to see when was the last tick
     
     required init(coder aCoder: NSCoder){
         fatalError("Not Found Coder");
@@ -24,6 +31,35 @@ class GameScene: SKScene {
         bgSprite.anchorPoint = CGPointMake(0, 1.0)
         self.addChild( bgSprite)
     }
+    
+    //MARK: - Update functions
+    
+    override func update(currentTime: CFTimeInterval){
+        
+        // dont execute update function if lastTick is nil - game is paused
+        guard let lastTickValue = lastTick else{
+            return
+        }
+        
+        let timePassed = lastTickValue.timeIntervalSinceNow * -1000.0
+        if(timePassed > tickLength){
+            self.lastTick = NSDate()
+            if tick != nil{
+                tick!()
+            }
+        }
+        
+    }
+    
+    func startTicking(){
+        lastTick = NSDate()
+    }
+    
+    func stopTicking(){
+        lastTick = nil;
+    }
+    
+    //MARK: - View interaction functions
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -55,7 +91,4 @@ class GameScene: SKScene {
         }
     }
    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-    }
 }

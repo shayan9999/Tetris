@@ -6,21 +6,21 @@ provides-nominal:
 provides-member:
 - ["C6Tetris18GameViewController", ""]
 provides-dynamic-lookup:
-- "supportedInterfaceOrientations"
-- "viewDidLoad"
-- "prefersStatusBarHidden"
+- "didReceiveMemoryWarning"
 - "shouldAutorotate"
 - "gameScene"
-- "didReceiveMemoryWarning"
+- "prefersStatusBarHidden"
+- "viewDidLoad"
+- "supportedInterfaceOrientations"
 depends-top-level:
-- !private "UIDevice"
-- !private "SKView"
-- "Bool"
 - !private "BooleanLiteralType"
 - "GameScene"
+- !private "UIDevice"
+- "UIInterfaceOrientationMask"
 - "GameViewController"
 - "UIViewController"
-- "UIInterfaceOrientationMask"
+- "Bool"
+- !private "SKView"
 - !private "=="
 depends-member:
 - !private ["Ps9AnyObject", "GameScene"]
