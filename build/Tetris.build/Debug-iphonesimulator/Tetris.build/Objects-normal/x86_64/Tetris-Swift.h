@@ -94,8 +94,8 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import SpriteKit;
-@import Foundation;
 @import CoreGraphics;
+@import Foundation;
 @import CoreFoundation;
 #endif
 
@@ -117,24 +117,28 @@ SWIFT_CLASS("_TtC6Tetris11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class SKSpriteNode;
+@class SKNode;
 @class NSDate;
+@class SKTexture;
 @class NSCoder;
-@class SKView;
-@class UITouch;
-@class UIEvent;
 
 SWIFT_CLASS("_TtC6Tetris9GameScene")
 @interface GameScene : SKScene
+@property (nonatomic, strong) SKSpriteNode * _Nullable bgSprite;
+@property (nonatomic, readonly, strong) SKNode * _Nonnull gameLayer;
+@property (nonatomic, readonly, strong) SKNode * _Nonnull shapeLayer;
+@property (nonatomic, readonly) CGPoint LayerPosition;
 @property (nonatomic, copy) void (^ _Nullable tick)(void);
 @property (nonatomic) NSTimeInterval tickLength;
 @property (nonatomic, strong) NSDate * _Nullable lastTick;
+@property (nonatomic, copy) NSDictionary<NSString *, SKTexture *> * _Nonnull textureCache;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aCoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (void)update:(CFTimeInterval)currentTime;
 - (void)startTicking;
 - (void)stopTicking;
-- (void)didMoveToView:(SKView * _Nonnull)view;
-- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (CGPoint)getPointFromPosition:(NSInteger)column row:(NSInteger)row;
 @end
 
 @class NSBundle;
@@ -143,6 +147,8 @@ SWIFT_CLASS("_TtC6Tetris18GameViewController")
 @interface GameViewController : UIViewController
 @property (nonatomic, strong) GameScene * _Null_unspecified gameScene;
 - (void)viewDidLoad;
+- (void)gameTick;
+- (void)nextShape;
 - (BOOL)shouldAutorotate;
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations;
 - (void)didReceiveMemoryWarning;

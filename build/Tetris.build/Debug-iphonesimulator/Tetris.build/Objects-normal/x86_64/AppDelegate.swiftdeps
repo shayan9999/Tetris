@@ -7,22 +7,22 @@ provides-member:
 - ["C6Tetris11AppDelegate", ""]
 provides-dynamic-lookup:
 - "window"
-- "application"
-- "applicationDidEnterBackground"
 - "applicationDidBecomeActive"
 - "applicationWillEnterForeground"
-- "applicationWillResignActive"
+- "application"
 - "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "applicationWillResignActive"
 depends-top-level:
-- "NSObject"
 - !private "BooleanLiteralType"
-- "UIResponder"
 - "Bool"
 - "AnyObject"
-- "UIWindow"
-- "AppDelegate"
+- "NSObject"
+- "UIResponder"
 - "UIApplicationDelegate"
 - "UIApplication"
+- "UIWindow"
+- "AppDelegate"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

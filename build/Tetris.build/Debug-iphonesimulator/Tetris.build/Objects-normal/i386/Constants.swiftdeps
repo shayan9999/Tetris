@@ -1,0 +1,97 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "numberOfColors"
+- "totalOrientations"
+- "totalShapes"
+- "FirstBlockIdx"
+- "SecondBlockIdx"
+- "ThirdBlockIdx"
+- "FourthBlockIdx"
+- "totalTetrisColumns"
+- "totalTetrisRows"
+- "tetrisStartingColumn"
+- "tetrisStartingRow"
+- "tetrisBlockSize"
+- "tetrisRowForPreviewShape"
+- "PointsPerLine"
+- "LevelThreshold"
+- "=="
+- "=="
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- "Shape2D"
+- "tetrisRowForPreviewShape"
+- "IntegerLiteralType"
+- "totalTetrisColumns"
+- "LevelThreshold"
+- "CGFloat"
+- "=="
+- "totalShapes"
+- "Block2D"
+- "totalTetrisRows"
+- "UInt32"
+- "numberOfColors"
+- "FourthBlockIdx"
+- "totalOrientations"
+- "tetrisStartingColumn"
+- "SecondBlockIdx"
+- !private "&&"
+- "Bool"
+- "ThirdBlockIdx"
+- "FloatLiteralType"
+- "Int"
+- "tetrisBlockSize"
+- "PointsPerLine"
+- "FirstBlockIdx"
+- "tetrisStartingRow"
+depends-member:
+- !private ["Ps9AnyObject", "color"]
+- !private ["Ps9AnyObject", "column"]
+- !private ["Ps9AnyObject", "row"]
+- !private ["C6Tetris7Block2D", "color"]
+- !private ["C6Tetris7Block2D", "column"]
+- !private ["C6Tetris7Block2D", "row"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["O6Tetris5Color", "deinit"]
+- !private ["O6Tetris5Color", "rawValue"]
+- !private ["Ps23CustomStringConvertible", "color"]
+- !private ["Ps23CustomStringConvertible", "column"]
+- !private ["Ps23CustomStringConvertible", "rawValue"]
+- !private ["Ps23CustomStringConvertible", "row"]
+- !private ["Ps9Equatable", "color"]
+- !private ["Ps9Equatable", "column"]
+- !private ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "row"]
+- !private ["Ps8Hashable", "color"]
+- !private ["Ps8Hashable", "column"]
+- !private ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "row"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- !private ["C6Tetris7Shape2D", "column"]
+- !private ["C6Tetris7Shape2D", "row"]
+depends-nominal:
+- !private "Ps9AnyObject"
+- !private "C6Tetris7Block2D"
+- "V12CoreGraphics7CGFloat"
+- !private "O6Tetris5Color"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps8Hashable"
+- !private "Ps16RawRepresentable"
+- !private "C6Tetris7Shape2D"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/simd.swiftmodule"
+interface-hash: "7f57eab77e6a4310e169fcb25b9873f9"
