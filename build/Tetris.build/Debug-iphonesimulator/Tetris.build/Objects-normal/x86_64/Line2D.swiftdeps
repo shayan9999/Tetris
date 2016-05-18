@@ -8,14 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "IntegerLiteralType"
-- "Orientation"
-- !private "Dictionary"
-- "Block2D"
 - "Line2D"
+- !private "Dictionary"
 - "Int"
+- "Orientation"
 - !private "FourthBlockIdx"
-- "Shape2D"
 - "Array"
+- "Block2D"
+- "Shape2D"
 - !private "FloatLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "FourthBlockIdx"]

@@ -16,11 +16,17 @@ class GameViewController: UIViewController, GameDelegate, UIGestureRecognizerDel
     var gameEngine: GameEngine!
     var referenceTappedPoint: CGPoint?
     
+    @IBOutlet weak var labelForScore: UILabel!
+    @IBOutlet weak var labelForLevel: UILabel!
+    @IBOutlet weak var viewContainerForScene: UIView!
+    @IBOutlet weak var labelForHighScore: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Configuring the view set-up
-        let spriteKitView = self.view as! SKView //downcast to SKView
+        let spriteKitView = self.viewContainerForScene as! SKView //downcast to SKView
         spriteKitView.multipleTouchEnabled = false
         
         // create new scene and set some properties
@@ -87,12 +93,35 @@ class GameViewController: UIViewController, GameDelegate, UIGestureRecognizerDel
         }
     }
     
+    //MARK: - Helper Functions
+    
+    func handleScoreChange(){
+        let currentHighScore = NSUserDefaults.standardUserDefaults().integerForKey(USER_DEFAULT_KEY_HIGH_SCORE)
+        self.labelForScore.text = "\(self.gameEngine.score)"
+        
+        //If high score has been passed, update high score in permanent storage and update screen label
+        if(self.gameEngine.score > currentHighScore){
+            self.labelForHighScore.text = "\(self.gameEngine.score)"
+            NSUserDefaults.standardUserDefaults().setInteger(self.gameEngine.score, forKey: USER_DEFAULT_KEY_HIGH_SCORE)
+        }
+        
+    }
+    
     //MARK: - GameDelegate methods
     
-    func gameDidBegin(swiftris: GameEngine) {
+    func gameDidBegin(engine: GameEngine) {
+        
+        let highestScore: Int = NSUserDefaults.standardUserDefaults().integerForKey(USER_DEFAULT_KEY_HIGH_SCORE)
+        
+        labelForScore.text = "\(self.gameEngine.level)"
+        labelForLevel.text = "\(self.gameEngine.score)"
+        labelForHighScore.text = "\(highestScore)"
+        
+        self.gameScene.tickLength  = TickLevelOne
+        
         // The following is false when restarting a new game
-        if swiftris.nextShape != nil && swiftris.nextShape!.blocks[0].sprite == nil {
-            gameScene.addPreviewShapeToGameScene(swiftris.nextShape!) {
+        if engine.nextShape != nil && engine.nextShape!.blocks[0].sprite == nil {
+            gameScene.addPreviewShapeToGameScene(engine.nextShape!) {
                 self.nextShape()
             }
         } else {
@@ -100,29 +129,25 @@ class GameViewController: UIViewController, GameDelegate, UIGestureRecognizerDel
         }
     }
     
-    func gameDidEnd(swiftris: GameEngine) {
+    func gameDidEnd(engine: GameEngine) {
         view.userInteractionEnabled = false
         self.gameScene.stopGameTimer()
         self.gameScene.playSound("gameover.mp3")
-        
-        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC)))
-        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-            self.gameEngine.beginGame()
-        })
     }
     
-    func gameDidLevelUp(swiftris: GameEngine) {
+    //TODO: PLay sound on level up and also change speed/ color background
+    func gameDidLevelUp(engine: GameEngine) {
         
     }
     
-    func gameShapeDidDrop(swiftris: GameEngine) {
+    func gameShapeDidDrop(engine: GameEngine) {
         self.gameScene.stopGameTimer()
-        self.gameScene.redrawShape(swiftris.fallingShape!) {
-            swiftris.letCurrentShapeFall()
+        self.gameScene.redrawShape(engine.fallingShape!) {
+            engine.letCurrentShapeFall()
         }
     }
     
-    func gameShapeDidLand(swiftris: GameEngine) {
+    func gameShapeDidLand(engine: GameEngine) {
         // stop timer and push next shape in
         gameScene.stopGameTimer()
         //nextShape()
@@ -131,16 +156,16 @@ class GameViewController: UIViewController, GameDelegate, UIGestureRecognizerDel
         self.view.userInteractionEnabled = false
         
         // Find the lines that match line break criteria and remove them
-        let removedLines = swiftris.getCompletedLines()
+        let removedLines = engine.getCompletedLines()
         if removedLines.linesRemoved.count > 0 {
-            //TODO: Animate things here 
-            //TODO: Update score here
-            //TODO: Play any sound here
+            //DONE: Animate things here
+            //DONE: Update score here
+            //DONE: Play any sound here
             self.gameScene.playSound("line_complete.wav")
-            //self.scoreLabel.text = "\(swiftris.score)"
+            self.handleScoreChange()
             self.gameScene.animateCollapsingLines(removedLines.linesRemoved, fallenBlocks:removedLines.fallenBlocks) {
                 // Do somethings here and then call itself to be able to do nextShape()
-                self.gameShapeDidLand(swiftris)
+                self.gameShapeDidLand(engine)
             }
         
         } else {
@@ -148,8 +173,16 @@ class GameViewController: UIViewController, GameDelegate, UIGestureRecognizerDel
         }
     }
     
-    func gameShapeDidMove(swiftris: GameEngine) {
-        gameScene.redrawShape(swiftris.fallingShape!) {}
+    func gameShapeDidMove(engine: GameEngine) {
+        gameScene.redrawShape(engine.fallingShape!) {}
+    }
+    
+    //MARK: - UI Interactions
+    
+    @IBAction func endGame(sender: AnyObject) {
+        self.gameEngine.endGame()
+        self.gameScene.stopGameTimer()
+        //self.gameScene.stopBackgroundMusic()
     }
     
     //MARK: - ViewController methods

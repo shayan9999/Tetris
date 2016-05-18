@@ -7,19 +7,19 @@ provides-member:
 - ["C6Tetris8LShape2D", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "FirstBlockIdx"
-- !private "Dictionary"
-- !private "IntegerLiteralType"
-- !private "ThirdBlockIdx"
-- "Orientation"
 - !private "SecondBlockIdx"
-- !private "FourthBlockIdx"
+- !private "IntegerLiteralType"
+- "LShape2D"
+- "Shape2D"
 - "Block2D"
 - "Array"
-- "LShape2D"
-- !private "FloatLiteralType"
-- "Shape2D"
 - "Int"
+- !private "Dictionary"
+- !private "FirstBlockIdx"
+- "Orientation"
+- !private "FourthBlockIdx"
+- !private "ThirdBlockIdx"
+- !private "FloatLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "FirstBlockIdx"]
 - !private ["Ps9AnyObject", "FourthBlockIdx"]

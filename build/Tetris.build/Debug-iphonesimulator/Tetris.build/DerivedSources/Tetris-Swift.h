@@ -143,14 +143,21 @@ SWIFT_CLASS("_TtC6Tetris9GameScene")
 @end
 
 @class UIGestureRecognizer;
+@class UILabel;
+@class UIView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC6Tetris18GameViewController")
 @interface GameViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) GameScene * _Null_unspecified gameScene;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified labelForScore;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified labelForLevel;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewContainerForScene;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified labelForHighScore;
 - (void)viewDidLoad;
 - (void)gameTick;
 - (void)nextShape;
+- (void)handleScoreChange;
 - (BOOL)shouldAutorotate;
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations;
 - (void)didReceiveMemoryWarning;

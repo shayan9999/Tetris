@@ -13,6 +13,7 @@ import UIKit
 let numberOfColors: UInt32                      = 6
 let totalOrientations: UInt32                   = 4
 let totalShapes: UInt32                         = 7
+let TickLevelOne                                = NSTimeInterval(600);
 
 // Shape Indexes
 let FirstBlockIdx: Int                          = 0
@@ -31,6 +32,10 @@ let tetrisRowForPreviewShape                    = 1
 // Game Score defaults
 let PointsPerLine                               = 10
 let LevelThreshold                              = 500
+
+//MARK: - User  Defaults Keys
+
+let USER_DEFAULT_KEY_HIGH_SCORE: String         = "TETRIS_HIGH_SCORE"
 
 //MARK: - Extension methods for custom classes
 

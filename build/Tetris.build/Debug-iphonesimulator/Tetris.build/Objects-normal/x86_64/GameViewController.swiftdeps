@@ -6,57 +6,68 @@ provides-nominal:
 provides-member:
 - ["C6Tetris18GameViewController", ""]
 provides-dynamic-lookup:
-- "tappedView"
-- "movedFingers"
 - "gameScene"
-- "viewDidLoad"
-- "gameTick"
-- "supportedInterfaceOrientations"
+- "labelForScore"
 - "nextShape"
-- "swipedFingers"
 - "shouldAutorotate"
 - "didReceiveMemoryWarning"
+- "gameTick"
+- "labelForHighScore"
+- "supportedInterfaceOrientations"
+- "movedFingers"
+- "labelForLevel"
+- "tappedView"
+- "viewDidLoad"
 - "gestureRecognizer"
 - "gestureRecognizer"
+- "swipedFingers"
+- "viewContainerForScene"
+- "handleScoreChange"
 - "prefersStatusBarHidden"
 depends-top-level:
-- !private "=="
+- !private "*"
+- !private "UIPanGestureRecognizer"
+- "UIGestureRecognizerDelegate"
+- "UIViewController"
+- "UIInterfaceOrientationMask"
+- "GameDelegate"
+- !private "BooleanLiteralType"
+- !private "USER_DEFAULT_KEY_HIGH_SCORE"
+- !private "TickLevelOne"
+- !private "dispatch_time_t"
+- "GameScene"
+- !private ">"
 - !private "DISPATCH_TIME_NOW"
 - "UIGestureRecognizer"
-- !private "UIDevice"
 - !private "Int64"
-- "UIViewController"
-- "CGPoint"
-- !private "UIGestureRecognizerState"
-- !private "dispatch_time"
-- !private "dispatch_get_main_queue"
-- !private "CGFloat"
-- "UIGestureRecognizerDelegate"
-- "GameScene"
-- !private "abs"
-- !private "-"
-- !private "dispatch_time_t"
-- "GameDelegate"
-- "AnyObject"
-- !private "UISwipeGestureRecognizer"
-- !private "!="
-- !private "tetrisBlockSize"
-- !private "StringLiteralType"
-- "UIInterfaceOrientationMask"
-- !private "*"
-- !private "SKView"
 - !private "dispatch_after"
-- !private "UITapGestureRecognizer"
+- !private "UIDevice"
+- !private "SKView"
+- !private "CGFloat"
+- !private "-"
 - "GameViewController"
+- !private "Int"
+- !private "dispatch_get_main_queue"
+- !private "dispatch_time"
 - "GameEngine"
-- !private "BooleanLiteralType"
-- !private "&&"
-- "Bool"
-- !private ">"
 - !private "Double"
-- !private "SKSceneScaleMode"
-- !private "UIPanGestureRecognizer"
+- !private "abs"
+- "UILabel"
 - !private "NSEC_PER_SEC"
+- !private "StringLiteralType"
+- !private "UIGestureRecognizerState"
+- !private "SKSceneScaleMode"
+- "AnyObject"
+- !private "&&"
+- "UIView"
+- !private "UISwipeGestureRecognizer"
+- "CGPoint"
+- !private "tetrisBlockSize"
+- "Bool"
+- !private "UITapGestureRecognizer"
+- !private "NSUserDefaults"
+- !private "=="
+- !private "!="
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -68,9 +79,12 @@ depends-member:
 - !private ["Ps9AnyObject", "GameScene"]
 - !private ["Ps9AnyObject", "Int64"]
 - !private ["Ps9AnyObject", "NSEC_PER_SEC"]
+- !private ["Ps9AnyObject", "NSUserDefaults"]
 - !private ["Ps9AnyObject", "SKSceneScaleMode"]
+- !private ["Ps9AnyObject", "TickLevelOne"]
 - !private ["Ps9AnyObject", "UIDevice"]
 - !private ["Ps9AnyObject", "UIGestureRecognizerState"]
+- !private ["Ps9AnyObject", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["Ps9AnyObject", "abs"]
 - !private ["Ps9AnyObject", "addPreviewShapeToGameScene"]
 - !private ["Ps9AnyObject", "animateCollapsingLines"]
@@ -97,8 +111,14 @@ depends-member:
 - ["Ps9AnyObject", "gestureRecognizer"]
 - ["Ps9AnyObject", "gestureRecognizerShouldBegin"]
 - !private ["Ps9AnyObject", "getCompletedLines"]
+- ["Ps9AnyObject", "handleScoreChange"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "integerForKey"]
+- ["Ps9AnyObject", "labelForHighScore"]
+- ["Ps9AnyObject", "labelForLevel"]
+- ["Ps9AnyObject", "labelForScore"]
 - !private ["Ps9AnyObject", "letCurrentShapeFall"]
+- !private ["Ps9AnyObject", "level"]
 - !private ["Ps9AnyObject", "moveCurrentShapeLeft"]
 - !private ["Ps9AnyObject", "moveCurrentShapeRight"]
 - !private ["Ps9AnyObject", "movePreviewShape"]
@@ -114,20 +134,26 @@ depends-member:
 - !private ["Ps9AnyObject", "resumeGameTimer"]
 - !private ["Ps9AnyObject", "rotateCurrentShape"]
 - !private ["Ps9AnyObject", "scaleMode"]
+- !private ["Ps9AnyObject", "score"]
+- !private ["Ps9AnyObject", "setInteger"]
 - ["Ps9AnyObject", "shouldAutorotate"]
 - !private ["Ps9AnyObject", "sprite"]
+- !private ["Ps9AnyObject", "standardUserDefaults"]
 - !private ["Ps9AnyObject", "state"]
 - !private ["Ps9AnyObject", "stopGameTimer"]
 - ["Ps9AnyObject", "supportedInterfaceOrientations"]
 - ["Ps9AnyObject", "swipedFingers"]
 - ["Ps9AnyObject", "tappedView"]
 - !private ["Ps9AnyObject", "tetrisBlockSize"]
+- !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "tick"]
+- !private ["Ps9AnyObject", "tickLength"]
 - !private ["Ps9AnyObject", "translationInView"]
 - !private ["Ps9AnyObject", "userInteractionEnabled"]
 - !private ["Ps9AnyObject", "userInterfaceIdiom"]
 - !private ["Ps9AnyObject", "velocityInView"]
 - !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewContainerForScene"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
@@ -155,6 +181,7 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "init"]
 - !private ["C6Tetris7Block2D", "sprite"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["V12CoreGraphics7CGFloat", "IntegerLiteralType"]
@@ -172,10 +199,13 @@ depends-member:
 - !private ["Ps11CVarArgType", "Int64"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "NSEC_PER_SEC"]
+- !private ["Ps11CVarArgType", "NSUserDefaults"]
 - !private ["Ps11CVarArgType", "SKSceneScaleMode"]
 - !private ["Ps11CVarArgType", "Stride"]
+- !private ["Ps11CVarArgType", "TickLevelOne"]
 - !private ["Ps11CVarArgType", "UIDevice"]
 - !private ["Ps11CVarArgType", "UIGestureRecognizerState"]
+- !private ["Ps11CVarArgType", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["Ps11CVarArgType", "abs"]
 - !private ["Ps11CVarArgType", "addPreviewShapeToGameScene"]
 - !private ["Ps11CVarArgType", "animateCollapsingLines"]
@@ -196,7 +226,12 @@ depends-member:
 - ["Ps11CVarArgType", "gameTick"]
 - ["Ps11CVarArgType", "gestureRecognizer"]
 - ["Ps11CVarArgType", "gestureRecognizerShouldBegin"]
+- ["Ps11CVarArgType", "handleScoreChange"]
 - ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "integerForKey"]
+- ["Ps11CVarArgType", "labelForHighScore"]
+- ["Ps11CVarArgType", "labelForLevel"]
+- ["Ps11CVarArgType", "labelForScore"]
 - !private ["Ps11CVarArgType", "movePreviewShape"]
 - ["Ps11CVarArgType", "movedFingers"]
 - !private ["Ps11CVarArgType", "multipleTouchEnabled"]
@@ -208,18 +243,24 @@ depends-member:
 - ["Ps11CVarArgType", "referenceTappedPoint"]
 - !private ["Ps11CVarArgType", "resumeGameTimer"]
 - !private ["Ps11CVarArgType", "scaleMode"]
+- !private ["Ps11CVarArgType", "setInteger"]
 - ["Ps11CVarArgType", "shouldAutorotate"]
+- !private ["Ps11CVarArgType", "standardUserDefaults"]
 - !private ["Ps11CVarArgType", "stopGameTimer"]
 - ["Ps11CVarArgType", "supportedInterfaceOrientations"]
 - ["Ps11CVarArgType", "swipedFingers"]
 - ["Ps11CVarArgType", "tappedView"]
 - !private ["Ps11CVarArgType", "tetrisBlockSize"]
+- !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "tick"]
+- !private ["Ps11CVarArgType", "tickLength"]
 - !private ["Ps11CVarArgType", "userInteractionEnabled"]
 - !private ["Ps11CVarArgType", "userInterfaceIdiom"]
 - !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewContainerForScene"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
 - !private ["Ps14CollectionType", "SubSequence"]
@@ -241,11 +282,14 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Int64"]
 - !private ["Ps28CustomDebugStringConvertible", "IntegerLiteralType"]
 - !private ["Ps28CustomDebugStringConvertible", "NSEC_PER_SEC"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "SKSceneScaleMode"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "TickLevelOne"]
 - !private ["Ps28CustomDebugStringConvertible", "UIDevice"]
 - !private ["Ps28CustomDebugStringConvertible", "UIGestureRecognizerState"]
+- !private ["Ps28CustomDebugStringConvertible", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["Ps28CustomDebugStringConvertible", "abs"]
 - !private ["Ps28CustomDebugStringConvertible", "addPreviewShapeToGameScene"]
 - !private ["Ps28CustomDebugStringConvertible", "animateCollapsingLines"]
@@ -267,7 +311,12 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "gameTick"]
 - ["Ps28CustomDebugStringConvertible", "gestureRecognizer"]
 - ["Ps28CustomDebugStringConvertible", "gestureRecognizerShouldBegin"]
+- ["Ps28CustomDebugStringConvertible", "handleScoreChange"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "integerForKey"]
+- ["Ps28CustomDebugStringConvertible", "labelForHighScore"]
+- ["Ps28CustomDebugStringConvertible", "labelForLevel"]
+- ["Ps28CustomDebugStringConvertible", "labelForScore"]
 - !private ["Ps28CustomDebugStringConvertible", "movePreviewShape"]
 - ["Ps28CustomDebugStringConvertible", "movedFingers"]
 - !private ["Ps28CustomDebugStringConvertible", "multipleTouchEnabled"]
@@ -279,18 +328,23 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "referenceTappedPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "resumeGameTimer"]
 - !private ["Ps28CustomDebugStringConvertible", "scaleMode"]
+- !private ["Ps28CustomDebugStringConvertible", "setInteger"]
 - ["Ps28CustomDebugStringConvertible", "shouldAutorotate"]
 - !private ["Ps28CustomDebugStringConvertible", "sprite"]
+- !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "stopGameTimer"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "supportedInterfaceOrientations"]
 - ["Ps28CustomDebugStringConvertible", "swipedFingers"]
 - ["Ps28CustomDebugStringConvertible", "tappedView"]
 - !private ["Ps28CustomDebugStringConvertible", "tetrisBlockSize"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "tick"]
+- !private ["Ps28CustomDebugStringConvertible", "tickLength"]
 - !private ["Ps28CustomDebugStringConvertible", "userInteractionEnabled"]
 - !private ["Ps28CustomDebugStringConvertible", "userInterfaceIdiom"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewContainerForScene"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CGFloat"]
@@ -304,11 +358,14 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Int64"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "NSEC_PER_SEC"]
+- !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "SKSceneScaleMode"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "TickLevelOne"]
 - !private ["Ps23CustomStringConvertible", "UIDevice"]
 - !private ["Ps23CustomStringConvertible", "UIGestureRecognizerState"]
+- !private ["Ps23CustomStringConvertible", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "abs"]
 - !private ["Ps23CustomStringConvertible", "addPreviewShapeToGameScene"]
@@ -332,7 +389,12 @@ depends-member:
 - ["Ps23CustomStringConvertible", "gameTick"]
 - ["Ps23CustomStringConvertible", "gestureRecognizer"]
 - ["Ps23CustomStringConvertible", "gestureRecognizerShouldBegin"]
+- ["Ps23CustomStringConvertible", "handleScoreChange"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "integerForKey"]
+- ["Ps23CustomStringConvertible", "labelForHighScore"]
+- ["Ps23CustomStringConvertible", "labelForLevel"]
+- ["Ps23CustomStringConvertible", "labelForScore"]
 - !private ["Ps23CustomStringConvertible", "movePreviewShape"]
 - ["Ps23CustomStringConvertible", "movedFingers"]
 - !private ["Ps23CustomStringConvertible", "multipleTouchEnabled"]
@@ -344,20 +406,26 @@ depends-member:
 - ["Ps23CustomStringConvertible", "referenceTappedPoint"]
 - !private ["Ps23CustomStringConvertible", "resumeGameTimer"]
 - !private ["Ps23CustomStringConvertible", "scaleMode"]
+- !private ["Ps23CustomStringConvertible", "setInteger"]
 - ["Ps23CustomStringConvertible", "shouldAutorotate"]
 - !private ["Ps23CustomStringConvertible", "sprite"]
+- !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "stopGameTimer"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "supportedInterfaceOrientations"]
 - ["Ps23CustomStringConvertible", "swipedFingers"]
 - ["Ps23CustomStringConvertible", "tappedView"]
 - !private ["Ps23CustomStringConvertible", "tetrisBlockSize"]
+- !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "tick"]
+- !private ["Ps23CustomStringConvertible", "tickLength"]
 - !private ["Ps23CustomStringConvertible", "userInteractionEnabled"]
 - !private ["Ps23CustomStringConvertible", "userInterfaceIdiom"]
 - !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewContainerForScene"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
 - !private ["Sd", "init"]
 - !private ["Ps9Equatable", "All"]
 - !private ["Ps9Equatable", "AllButUpsideDown"]
@@ -372,12 +440,15 @@ depends-member:
 - !private ["Ps9Equatable", "Int64"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "NSEC_PER_SEC"]
+- !private ["Ps9Equatable", "NSUserDefaults"]
 - !private ["Ps9Equatable", "Phone"]
 - !private ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "SKSceneScaleMode"]
 - !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "TickLevelOne"]
 - !private ["Ps9Equatable", "UIDevice"]
 - !private ["Ps9Equatable", "UIGestureRecognizerState"]
+- !private ["Ps9Equatable", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "abs"]
 - !private ["Ps9Equatable", "addPreviewShapeToGameScene"]
@@ -400,7 +471,12 @@ depends-member:
 - ["Ps9Equatable", "gameTick"]
 - ["Ps9Equatable", "gestureRecognizer"]
 - ["Ps9Equatable", "gestureRecognizerShouldBegin"]
+- ["Ps9Equatable", "handleScoreChange"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "integerForKey"]
+- ["Ps9Equatable", "labelForHighScore"]
+- ["Ps9Equatable", "labelForLevel"]
+- ["Ps9Equatable", "labelForScore"]
 - !private ["Ps9Equatable", "movePreviewShape"]
 - ["Ps9Equatable", "movedFingers"]
 - !private ["Ps9Equatable", "multipleTouchEnabled"]
@@ -412,21 +488,28 @@ depends-member:
 - ["Ps9Equatable", "referenceTappedPoint"]
 - !private ["Ps9Equatable", "resumeGameTimer"]
 - !private ["Ps9Equatable", "scaleMode"]
+- !private ["Ps9Equatable", "setInteger"]
 - ["Ps9Equatable", "shouldAutorotate"]
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "sprite"]
+- !private ["Ps9Equatable", "standardUserDefaults"]
 - !private ["Ps9Equatable", "stopGameTimer"]
 - ["Ps9Equatable", "supportedInterfaceOrientations"]
 - ["Ps9Equatable", "swipedFingers"]
 - ["Ps9Equatable", "tappedView"]
 - !private ["Ps9Equatable", "tetrisBlockSize"]
+- !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "tick"]
+- !private ["Ps9Equatable", "tickLength"]
 - !private ["Ps9Equatable", "userInteractionEnabled"]
 - !private ["Ps9Equatable", "userInterfaceIdiom"]
 - !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewContainerForScene"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "x"]
 - ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
 - !private ["Ps23FloatLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps23FloatLiteralConvertible", "Stride"]
 - !private ["Ps23FloatLiteralConvertible", "init"]
@@ -443,9 +526,12 @@ depends-member:
 - !private ["P6Tetris12GameDelegate", "GameScene"]
 - !private ["P6Tetris12GameDelegate", "Int64"]
 - !private ["P6Tetris12GameDelegate", "NSEC_PER_SEC"]
+- !private ["P6Tetris12GameDelegate", "NSUserDefaults"]
 - !private ["P6Tetris12GameDelegate", "SKSceneScaleMode"]
+- !private ["P6Tetris12GameDelegate", "TickLevelOne"]
 - !private ["P6Tetris12GameDelegate", "UIDevice"]
 - !private ["P6Tetris12GameDelegate", "UIGestureRecognizerState"]
+- !private ["P6Tetris12GameDelegate", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["P6Tetris12GameDelegate", "abs"]
 - !private ["P6Tetris12GameDelegate", "dispatch_after"]
 - !private ["P6Tetris12GameDelegate", "dispatch_get_main_queue"]
@@ -461,10 +547,15 @@ depends-member:
 - !private ["P6Tetris12GameDelegate", "gameTick"]
 - ["P6Tetris12GameDelegate", "gestureRecognizer"]
 - ["P6Tetris12GameDelegate", "gestureRecognizerShouldBegin"]
+- !private ["P6Tetris12GameDelegate", "handleScoreChange"]
+- !private ["P6Tetris12GameDelegate", "labelForHighScore"]
+- !private ["P6Tetris12GameDelegate", "labelForLevel"]
+- !private ["P6Tetris12GameDelegate", "labelForScore"]
 - !private ["P6Tetris12GameDelegate", "nextShape"]
 - !private ["P6Tetris12GameDelegate", "referenceTappedPoint"]
 - !private ["P6Tetris12GameDelegate", "tetrisBlockSize"]
 - !private ["P6Tetris12GameDelegate", "view"]
+- !private ["P6Tetris12GameDelegate", "viewContainerForScene"]
 - ["P6Tetris12GameDelegate", ""]
 - !private ["C6Tetris10GameEngine", "beginGame"]
 - !private ["C6Tetris10GameEngine", "delegate"]
@@ -473,11 +564,13 @@ depends-member:
 - !private ["C6Tetris10GameEngine", "getCompletedLines"]
 - !private ["C6Tetris10GameEngine", "init"]
 - !private ["C6Tetris10GameEngine", "letCurrentShapeFall"]
+- !private ["C6Tetris10GameEngine", "level"]
 - !private ["C6Tetris10GameEngine", "moveCurrentShapeLeft"]
 - !private ["C6Tetris10GameEngine", "moveCurrentShapeRight"]
 - !private ["C6Tetris10GameEngine", "newShape"]
 - !private ["C6Tetris10GameEngine", "nextShape"]
 - !private ["C6Tetris10GameEngine", "rotateCurrentShape"]
+- !private ["C6Tetris10GameEngine", "score"]
 - !private ["C6Tetris9GameScene", "addPreviewShapeToGameScene"]
 - !private ["C6Tetris9GameScene", "animateCollapsingLines"]
 - !private ["C6Tetris9GameScene", "init"]
@@ -488,6 +581,7 @@ depends-member:
 - !private ["C6Tetris9GameScene", "scaleMode"]
 - !private ["C6Tetris9GameScene", "stopGameTimer"]
 - !private ["C6Tetris9GameScene", "tick"]
+- !private ["C6Tetris9GameScene", "tickLength"]
 - ["C6Tetris18GameViewController", "AnyObject"]
 - ["C6Tetris18GameViewController", "Bool"]
 - !private ["C6Tetris18GameViewController", "CGFloat"]
@@ -496,17 +590,23 @@ depends-member:
 - !private ["C6Tetris18GameViewController", "Double"]
 - ["C6Tetris18GameViewController", "GameEngine"]
 - ["C6Tetris18GameViewController", "GameScene"]
+- !private ["C6Tetris18GameViewController", "Int"]
 - !private ["C6Tetris18GameViewController", "Int64"]
 - !private ["C6Tetris18GameViewController", "NSEC_PER_SEC"]
+- !private ["C6Tetris18GameViewController", "NSUserDefaults"]
 - !private ["C6Tetris18GameViewController", "SKSceneScaleMode"]
 - !private ["C6Tetris18GameViewController", "SKView"]
+- !private ["C6Tetris18GameViewController", "TickLevelOne"]
 - !private ["C6Tetris18GameViewController", "UIDevice"]
 - ["C6Tetris18GameViewController", "UIGestureRecognizer"]
 - !private ["C6Tetris18GameViewController", "UIGestureRecognizerState"]
 - ["C6Tetris18GameViewController", "UIInterfaceOrientationMask"]
+- ["C6Tetris18GameViewController", "UILabel"]
 - !private ["C6Tetris18GameViewController", "UIPanGestureRecognizer"]
 - !private ["C6Tetris18GameViewController", "UISwipeGestureRecognizer"]
 - !private ["C6Tetris18GameViewController", "UITapGestureRecognizer"]
+- ["C6Tetris18GameViewController", "UIView"]
+- !private ["C6Tetris18GameViewController", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["C6Tetris18GameViewController", "abs"]
 - ["C6Tetris18GameViewController", "deinit"]
 - ["C6Tetris18GameViewController", "didReceiveMemoryWarning"]
@@ -525,7 +625,11 @@ depends-member:
 - ["C6Tetris18GameViewController", "gameTick"]
 - ["C6Tetris18GameViewController", "gestureRecognizer"]
 - ["C6Tetris18GameViewController", "gestureRecognizerShouldBegin"]
+- ["C6Tetris18GameViewController", "handleScoreChange"]
 - ["C6Tetris18GameViewController", "init"]
+- ["C6Tetris18GameViewController", "labelForHighScore"]
+- ["C6Tetris18GameViewController", "labelForLevel"]
+- ["C6Tetris18GameViewController", "labelForScore"]
 - ["C6Tetris18GameViewController", "movedFingers"]
 - ["C6Tetris18GameViewController", "nextShape"]
 - ["C6Tetris18GameViewController", "prefersStatusBarHidden"]
@@ -536,6 +640,7 @@ depends-member:
 - ["C6Tetris18GameViewController", "tappedView"]
 - !private ["C6Tetris18GameViewController", "tetrisBlockSize"]
 - !private ["C6Tetris18GameViewController", "view"]
+- ["C6Tetris18GameViewController", "viewContainerForScene"]
 - ["C6Tetris18GameViewController", "viewDidLoad"]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "AspectFill"]
@@ -549,12 +654,15 @@ depends-member:
 - !private ["Ps8Hashable", "Int64"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSEC_PER_SEC"]
+- !private ["Ps8Hashable", "NSUserDefaults"]
 - !private ["Ps8Hashable", "Phone"]
 - !private ["Ps8Hashable", "RawValue"]
 - !private ["Ps8Hashable", "SKSceneScaleMode"]
 - !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "TickLevelOne"]
 - !private ["Ps8Hashable", "UIDevice"]
 - !private ["Ps8Hashable", "UIGestureRecognizerState"]
+- !private ["Ps8Hashable", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "abs"]
 - !private ["Ps8Hashable", "addPreviewShapeToGameScene"]
@@ -577,7 +685,12 @@ depends-member:
 - ["Ps8Hashable", "gameTick"]
 - ["Ps8Hashable", "gestureRecognizer"]
 - ["Ps8Hashable", "gestureRecognizerShouldBegin"]
+- ["Ps8Hashable", "handleScoreChange"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "integerForKey"]
+- ["Ps8Hashable", "labelForHighScore"]
+- ["Ps8Hashable", "labelForLevel"]
+- ["Ps8Hashable", "labelForScore"]
 - !private ["Ps8Hashable", "movePreviewShape"]
 - ["Ps8Hashable", "movedFingers"]
 - !private ["Ps8Hashable", "multipleTouchEnabled"]
@@ -589,17 +702,22 @@ depends-member:
 - ["Ps8Hashable", "referenceTappedPoint"]
 - !private ["Ps8Hashable", "resumeGameTimer"]
 - !private ["Ps8Hashable", "scaleMode"]
+- !private ["Ps8Hashable", "setInteger"]
 - ["Ps8Hashable", "shouldAutorotate"]
 - !private ["Ps8Hashable", "sprite"]
+- !private ["Ps8Hashable", "standardUserDefaults"]
 - !private ["Ps8Hashable", "stopGameTimer"]
 - ["Ps8Hashable", "supportedInterfaceOrientations"]
 - ["Ps8Hashable", "swipedFingers"]
 - ["Ps8Hashable", "tappedView"]
 - !private ["Ps8Hashable", "tetrisBlockSize"]
+- !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "tick"]
+- !private ["Ps8Hashable", "tickLength"]
 - !private ["Ps8Hashable", "userInteractionEnabled"]
 - !private ["Ps8Hashable", "userInterfaceIdiom"]
 - !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewContainerForScene"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
@@ -613,8 +731,13 @@ depends-member:
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
 - !private ["Vs5Int64", "init"]
 - !private ["Vs4Int8", "IntegerLiteralType"]
+- !private ["Vs4Int8", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps21IntegerArithmeticType", "init"]
@@ -654,9 +777,12 @@ depends-member:
 - !private ["PSo8NSCoding", "GameScene"]
 - !private ["PSo8NSCoding", "Int64"]
 - !private ["PSo8NSCoding", "NSEC_PER_SEC"]
+- !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "SKSceneScaleMode"]
+- !private ["PSo8NSCoding", "TickLevelOne"]
 - !private ["PSo8NSCoding", "UIDevice"]
 - !private ["PSo8NSCoding", "UIGestureRecognizerState"]
+- !private ["PSo8NSCoding", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo8NSCoding", "abs"]
 - !private ["PSo8NSCoding", "addPreviewShapeToGameScene"]
 - !private ["PSo8NSCoding", "animateCollapsingLines"]
@@ -676,7 +802,11 @@ depends-member:
 - ["PSo8NSCoding", "gameTick"]
 - ["PSo8NSCoding", "gestureRecognizer"]
 - ["PSo8NSCoding", "gestureRecognizerShouldBegin"]
+- ["PSo8NSCoding", "handleScoreChange"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "labelForHighScore"]
+- ["PSo8NSCoding", "labelForLevel"]
+- ["PSo8NSCoding", "labelForScore"]
 - !private ["PSo8NSCoding", "movePreviewShape"]
 - ["PSo8NSCoding", "movedFingers"]
 - !private ["PSo8NSCoding", "multipleTouchEnabled"]
@@ -694,9 +824,12 @@ depends-member:
 - ["PSo8NSCoding", "swipedFingers"]
 - ["PSo8NSCoding", "tappedView"]
 - !private ["PSo8NSCoding", "tetrisBlockSize"]
+- !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "tick"]
+- !private ["PSo8NSCoding", "tickLength"]
 - !private ["PSo8NSCoding", "userInteractionEnabled"]
 - !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewContainerForScene"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "addPreviewShapeToGameScene"]
@@ -709,6 +842,7 @@ depends-member:
 - !private ["PSo9NSCopying", "scaleMode"]
 - !private ["PSo9NSCopying", "stopGameTimer"]
 - !private ["PSo9NSCopying", "tick"]
+- !private ["PSo9NSCopying", "tickLength"]
 - !private ["PSo26NSExtensionRequestHandling", "CGFloat"]
 - !private ["PSo26NSExtensionRequestHandling", "DISPATCH_TIME_NOW"]
 - !private ["PSo26NSExtensionRequestHandling", "Double"]
@@ -716,9 +850,12 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "GameScene"]
 - !private ["PSo26NSExtensionRequestHandling", "Int64"]
 - !private ["PSo26NSExtensionRequestHandling", "NSEC_PER_SEC"]
+- !private ["PSo26NSExtensionRequestHandling", "NSUserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "SKSceneScaleMode"]
+- !private ["PSo26NSExtensionRequestHandling", "TickLevelOne"]
 - !private ["PSo26NSExtensionRequestHandling", "UIDevice"]
 - !private ["PSo26NSExtensionRequestHandling", "UIGestureRecognizerState"]
+- !private ["PSo26NSExtensionRequestHandling", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo26NSExtensionRequestHandling", "abs"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dispatch_after"]
@@ -735,7 +872,11 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "gameTick"]
 - ["PSo26NSExtensionRequestHandling", "gestureRecognizer"]
 - ["PSo26NSExtensionRequestHandling", "gestureRecognizerShouldBegin"]
+- ["PSo26NSExtensionRequestHandling", "handleScoreChange"]
 - ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "labelForHighScore"]
+- ["PSo26NSExtensionRequestHandling", "labelForLevel"]
+- ["PSo26NSExtensionRequestHandling", "labelForScore"]
 - ["PSo26NSExtensionRequestHandling", "movedFingers"]
 - ["PSo26NSExtensionRequestHandling", "nextShape"]
 - ["PSo26NSExtensionRequestHandling", "prefersStatusBarHidden"]
@@ -746,8 +887,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "tappedView"]
 - !private ["PSo26NSExtensionRequestHandling", "tetrisBlockSize"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewContainerForScene"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CGFloat"]
@@ -756,17 +899,23 @@ depends-member:
 - !private ["CSo8NSObject", "Double"]
 - ["CSo8NSObject", "GameEngine"]
 - ["CSo8NSObject", "GameScene"]
+- !private ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "Int64"]
 - !private ["CSo8NSObject", "NSEC_PER_SEC"]
+- !private ["CSo8NSObject", "NSUserDefaults"]
 - !private ["CSo8NSObject", "SKSceneScaleMode"]
 - !private ["CSo8NSObject", "SKView"]
+- !private ["CSo8NSObject", "TickLevelOne"]
 - !private ["CSo8NSObject", "UIDevice"]
 - ["CSo8NSObject", "UIGestureRecognizer"]
 - !private ["CSo8NSObject", "UIGestureRecognizerState"]
 - ["CSo8NSObject", "UIInterfaceOrientationMask"]
+- ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UIPanGestureRecognizer"]
 - !private ["CSo8NSObject", "UISwipeGestureRecognizer"]
 - !private ["CSo8NSObject", "UITapGestureRecognizer"]
+- ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["CSo8NSObject", "abs"]
 - !private ["CSo8NSObject", "addPreviewShapeToGameScene"]
 - !private ["CSo8NSObject", "animateCollapsingLines"]
@@ -788,7 +937,12 @@ depends-member:
 - ["CSo8NSObject", "gameTick"]
 - ["CSo8NSObject", "gestureRecognizer"]
 - ["CSo8NSObject", "gestureRecognizerShouldBegin"]
+- ["CSo8NSObject", "handleScoreChange"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "integerForKey"]
+- ["CSo8NSObject", "labelForHighScore"]
+- ["CSo8NSObject", "labelForLevel"]
+- ["CSo8NSObject", "labelForScore"]
 - !private ["CSo8NSObject", "movePreviewShape"]
 - ["CSo8NSObject", "movedFingers"]
 - !private ["CSo8NSObject", "multipleTouchEnabled"]
@@ -800,16 +954,21 @@ depends-member:
 - ["CSo8NSObject", "referenceTappedPoint"]
 - !private ["CSo8NSObject", "resumeGameTimer"]
 - !private ["CSo8NSObject", "scaleMode"]
+- !private ["CSo8NSObject", "setInteger"]
 - ["CSo8NSObject", "shouldAutorotate"]
+- !private ["CSo8NSObject", "standardUserDefaults"]
 - !private ["CSo8NSObject", "stopGameTimer"]
 - ["CSo8NSObject", "supportedInterfaceOrientations"]
 - ["CSo8NSObject", "swipedFingers"]
 - ["CSo8NSObject", "tappedView"]
 - !private ["CSo8NSObject", "tetrisBlockSize"]
+- !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "tick"]
+- !private ["CSo8NSObject", "tickLength"]
 - !private ["CSo8NSObject", "userInteractionEnabled"]
 - !private ["CSo8NSObject", "userInterfaceIdiom"]
 - !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewContainerForScene"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "CGFloat"]
 - !private ["PSo16NSObjectProtocol", "DISPATCH_TIME_NOW"]
@@ -818,9 +977,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "GameScene"]
 - !private ["PSo16NSObjectProtocol", "Int64"]
 - !private ["PSo16NSObjectProtocol", "NSEC_PER_SEC"]
+- !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "SKSceneScaleMode"]
+- !private ["PSo16NSObjectProtocol", "TickLevelOne"]
 - !private ["PSo16NSObjectProtocol", "UIDevice"]
 - !private ["PSo16NSObjectProtocol", "UIGestureRecognizerState"]
+- !private ["PSo16NSObjectProtocol", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo16NSObjectProtocol", "abs"]
 - !private ["PSo16NSObjectProtocol", "addPreviewShapeToGameScene"]
 - !private ["PSo16NSObjectProtocol", "animateCollapsingLines"]
@@ -841,7 +1003,12 @@ depends-member:
 - ["PSo16NSObjectProtocol", "gameTick"]
 - ["PSo16NSObjectProtocol", "gestureRecognizer"]
 - ["PSo16NSObjectProtocol", "gestureRecognizerShouldBegin"]
+- ["PSo16NSObjectProtocol", "handleScoreChange"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "integerForKey"]
+- ["PSo16NSObjectProtocol", "labelForHighScore"]
+- ["PSo16NSObjectProtocol", "labelForLevel"]
+- ["PSo16NSObjectProtocol", "labelForScore"]
 - !private ["PSo16NSObjectProtocol", "movePreviewShape"]
 - ["PSo16NSObjectProtocol", "movedFingers"]
 - !private ["PSo16NSObjectProtocol", "multipleTouchEnabled"]
@@ -853,19 +1020,29 @@ depends-member:
 - ["PSo16NSObjectProtocol", "referenceTappedPoint"]
 - !private ["PSo16NSObjectProtocol", "resumeGameTimer"]
 - !private ["PSo16NSObjectProtocol", "scaleMode"]
+- !private ["PSo16NSObjectProtocol", "setInteger"]
 - ["PSo16NSObjectProtocol", "shouldAutorotate"]
+- !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "stopGameTimer"]
 - ["PSo16NSObjectProtocol", "supportedInterfaceOrientations"]
 - ["PSo16NSObjectProtocol", "swipedFingers"]
 - ["PSo16NSObjectProtocol", "tappedView"]
 - !private ["PSo16NSObjectProtocol", "tetrisBlockSize"]
+- !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "tick"]
+- !private ["PSo16NSObjectProtocol", "tickLength"]
 - !private ["PSo16NSObjectProtocol", "userInteractionEnabled"]
 - !private ["PSo16NSObjectProtocol", "userInterfaceIdiom"]
 - !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewContainerForScene"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
 - !private ["OSC21NSURLSessionTaskState", "deinit"]
+- !private ["CSo14NSUserDefaults", "integerForKey"]
+- !private ["CSo14NSUserDefaults", "setInteger"]
+- !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["Ps21NilLiteralConvertible", "IntegerLiteralType"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - !private ["Ps13OptionSetType", "All"]
@@ -873,6 +1050,7 @@ depends-member:
 - !private ["Sq", "IntegerLiteralType"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "init"]
@@ -897,6 +1075,7 @@ depends-member:
 - !private ["CSo12SKEffectNode", "scaleMode"]
 - !private ["CSo12SKEffectNode", "stopGameTimer"]
 - !private ["CSo12SKEffectNode", "tick"]
+- !private ["CSo12SKEffectNode", "tickLength"]
 - !private ["CSo6SKNode", "addPreviewShapeToGameScene"]
 - !private ["CSo6SKNode", "animateCollapsingLines"]
 - !private ["CSo6SKNode", "movePreviewShape"]
@@ -906,6 +1085,7 @@ depends-member:
 - !private ["CSo6SKNode", "scaleMode"]
 - !private ["CSo6SKNode", "stopGameTimer"]
 - !private ["CSo6SKNode", "tick"]
+- !private ["CSo6SKNode", "tickLength"]
 - !private ["CSo7SKScene", "addPreviewShapeToGameScene"]
 - !private ["CSo7SKScene", "animateCollapsingLines"]
 - !private ["CSo7SKScene", "movePreviewShape"]
@@ -915,6 +1095,7 @@ depends-member:
 - !private ["CSo7SKScene", "scaleMode"]
 - !private ["CSo7SKScene", "stopGameTimer"]
 - !private ["CSo7SKScene", "tick"]
+- !private ["CSo7SKScene", "tickLength"]
 - !private ["OSC16SKSceneScaleMode", "AspectFill"]
 - !private ["CSo6SKView", "bounds"]
 - !private ["CSo6SKView", "multipleTouchEnabled"]
@@ -942,17 +1123,23 @@ depends-member:
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "bounds"]
 - !private ["PSo29UIAccessibilityIdentification", "multipleTouchEnabled"]
 - !private ["PSo29UIAccessibilityIdentification", "presentScene"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "userInteractionEnabled"]
 - !private ["PSo12UIAppearance", "bounds"]
 - !private ["PSo12UIAppearance", "multipleTouchEnabled"]
 - !private ["PSo12UIAppearance", "presentScene"]
+- !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "userInteractionEnabled"]
 - !private ["PSo21UIAppearanceContainer", "CGFloat"]
 - !private ["PSo21UIAppearanceContainer", "DISPATCH_TIME_NOW"]
@@ -961,9 +1148,12 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "GameScene"]
 - !private ["PSo21UIAppearanceContainer", "Int64"]
 - !private ["PSo21UIAppearanceContainer", "NSEC_PER_SEC"]
+- !private ["PSo21UIAppearanceContainer", "NSUserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "SKSceneScaleMode"]
+- !private ["PSo21UIAppearanceContainer", "TickLevelOne"]
 - !private ["PSo21UIAppearanceContainer", "UIDevice"]
 - !private ["PSo21UIAppearanceContainer", "UIGestureRecognizerState"]
+- !private ["PSo21UIAppearanceContainer", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo21UIAppearanceContainer", "abs"]
 - !private ["PSo21UIAppearanceContainer", "bounds"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
@@ -981,7 +1171,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "gameTick"]
 - ["PSo21UIAppearanceContainer", "gestureRecognizer"]
 - ["PSo21UIAppearanceContainer", "gestureRecognizerShouldBegin"]
+- ["PSo21UIAppearanceContainer", "handleScoreChange"]
 - ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "labelForHighScore"]
+- ["PSo21UIAppearanceContainer", "labelForLevel"]
+- ["PSo21UIAppearanceContainer", "labelForScore"]
 - ["PSo21UIAppearanceContainer", "movedFingers"]
 - !private ["PSo21UIAppearanceContainer", "multipleTouchEnabled"]
 - ["PSo21UIAppearanceContainer", "nextShape"]
@@ -993,8 +1187,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "swipedFingers"]
 - ["PSo21UIAppearanceContainer", "tappedView"]
 - !private ["PSo21UIAppearanceContainer", "tetrisBlockSize"]
+- !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "userInteractionEnabled"]
 - !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewContainerForScene"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["PSo18UIContentContainer", "CGFloat"]
@@ -1004,9 +1200,12 @@ depends-member:
 - !private ["PSo18UIContentContainer", "GameScene"]
 - !private ["PSo18UIContentContainer", "Int64"]
 - !private ["PSo18UIContentContainer", "NSEC_PER_SEC"]
+- !private ["PSo18UIContentContainer", "NSUserDefaults"]
 - !private ["PSo18UIContentContainer", "SKSceneScaleMode"]
+- !private ["PSo18UIContentContainer", "TickLevelOne"]
 - !private ["PSo18UIContentContainer", "UIDevice"]
 - !private ["PSo18UIContentContainer", "UIGestureRecognizerState"]
+- !private ["PSo18UIContentContainer", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo18UIContentContainer", "abs"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dispatch_after"]
@@ -1023,7 +1222,11 @@ depends-member:
 - ["PSo18UIContentContainer", "gameTick"]
 - ["PSo18UIContentContainer", "gestureRecognizer"]
 - ["PSo18UIContentContainer", "gestureRecognizerShouldBegin"]
+- ["PSo18UIContentContainer", "handleScoreChange"]
 - ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "labelForHighScore"]
+- ["PSo18UIContentContainer", "labelForLevel"]
+- ["PSo18UIContentContainer", "labelForScore"]
 - ["PSo18UIContentContainer", "movedFingers"]
 - ["PSo18UIContentContainer", "nextShape"]
 - ["PSo18UIContentContainer", "prefersStatusBarHidden"]
@@ -1034,18 +1237,21 @@ depends-member:
 - ["PSo18UIContentContainer", "tappedView"]
 - !private ["PSo18UIContentContainer", "tetrisBlockSize"]
 - !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewContainerForScene"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["VSC14UIControlState", "deinit"]
 - !private ["PSo17UICoordinateSpace", "bounds"]
 - !private ["PSo17UICoordinateSpace", "multipleTouchEnabled"]
 - !private ["PSo17UICoordinateSpace", "presentScene"]
+- !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "userInteractionEnabled"]
 - !private ["CSo8UIDevice", "currentDevice"]
 - !private ["CSo8UIDevice", "userInterfaceIdiom"]
 - !private ["PSo13UIDynamicItem", "bounds"]
 - !private ["PSo13UIDynamicItem", "multipleTouchEnabled"]
 - !private ["PSo13UIDynamicItem", "presentScene"]
+- !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "userInteractionEnabled"]
 - !private ["PSo18UIFocusEnvironment", "CGFloat"]
 - !private ["PSo18UIFocusEnvironment", "DISPATCH_TIME_NOW"]
@@ -1054,9 +1260,12 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "GameScene"]
 - !private ["PSo18UIFocusEnvironment", "Int64"]
 - !private ["PSo18UIFocusEnvironment", "NSEC_PER_SEC"]
+- !private ["PSo18UIFocusEnvironment", "NSUserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "SKSceneScaleMode"]
+- !private ["PSo18UIFocusEnvironment", "TickLevelOne"]
 - !private ["PSo18UIFocusEnvironment", "UIDevice"]
 - !private ["PSo18UIFocusEnvironment", "UIGestureRecognizerState"]
+- !private ["PSo18UIFocusEnvironment", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo18UIFocusEnvironment", "abs"]
 - !private ["PSo18UIFocusEnvironment", "bounds"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
@@ -1074,7 +1283,11 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "gameTick"]
 - ["PSo18UIFocusEnvironment", "gestureRecognizer"]
 - ["PSo18UIFocusEnvironment", "gestureRecognizerShouldBegin"]
+- ["PSo18UIFocusEnvironment", "handleScoreChange"]
 - ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "labelForHighScore"]
+- ["PSo18UIFocusEnvironment", "labelForLevel"]
+- ["PSo18UIFocusEnvironment", "labelForScore"]
 - ["PSo18UIFocusEnvironment", "movedFingers"]
 - !private ["PSo18UIFocusEnvironment", "multipleTouchEnabled"]
 - ["PSo18UIFocusEnvironment", "nextShape"]
@@ -1086,8 +1299,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "swipedFingers"]
 - ["PSo18UIFocusEnvironment", "tappedView"]
 - !private ["PSo18UIFocusEnvironment", "tetrisBlockSize"]
+- !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "userInteractionEnabled"]
 - !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewContainerForScene"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["CSo19UIGestureRecognizer", "deinit"]
@@ -1098,9 +1313,12 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "GameScene"]
 - !private ["PSo27UIGestureRecognizerDelegate", "Int64"]
 - !private ["PSo27UIGestureRecognizerDelegate", "NSEC_PER_SEC"]
+- !private ["PSo27UIGestureRecognizerDelegate", "NSUserDefaults"]
 - !private ["PSo27UIGestureRecognizerDelegate", "SKSceneScaleMode"]
+- !private ["PSo27UIGestureRecognizerDelegate", "TickLevelOne"]
 - !private ["PSo27UIGestureRecognizerDelegate", "UIDevice"]
 - !private ["PSo27UIGestureRecognizerDelegate", "UIGestureRecognizerState"]
+- !private ["PSo27UIGestureRecognizerDelegate", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo27UIGestureRecognizerDelegate", "abs"]
 - !private ["PSo27UIGestureRecognizerDelegate", "dispatch_after"]
 - !private ["PSo27UIGestureRecognizerDelegate", "dispatch_get_main_queue"]
@@ -1116,16 +1334,22 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "gameTick"]
 - ["PSo27UIGestureRecognizerDelegate", "gestureRecognizer"]
 - ["PSo27UIGestureRecognizerDelegate", "gestureRecognizerShouldBegin"]
+- !private ["PSo27UIGestureRecognizerDelegate", "handleScoreChange"]
+- !private ["PSo27UIGestureRecognizerDelegate", "labelForHighScore"]
+- !private ["PSo27UIGestureRecognizerDelegate", "labelForLevel"]
+- !private ["PSo27UIGestureRecognizerDelegate", "labelForScore"]
 - !private ["PSo27UIGestureRecognizerDelegate", "nextShape"]
 - !private ["PSo27UIGestureRecognizerDelegate", "referenceTappedPoint"]
 - !private ["PSo27UIGestureRecognizerDelegate", "tetrisBlockSize"]
 - !private ["PSo27UIGestureRecognizerDelegate", "view"]
+- !private ["PSo27UIGestureRecognizerDelegate", "viewContainerForScene"]
 - ["PSo27UIGestureRecognizerDelegate", ""]
 - !private ["OSC24UIGestureRecognizerState", "Began"]
 - !private ["OSC24UIGestureRecognizerState", "RawValue"]
 - !private ["OSC24UIGestureRecognizerState", "deinit"]
 - !private ["VSC26UIInterfaceOrientationMask", "All"]
 - !private ["VSC26UIInterfaceOrientationMask", "AllButUpsideDown"]
+- !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGFloat"]
@@ -1134,17 +1358,23 @@ depends-member:
 - !private ["CSo11UIResponder", "Double"]
 - ["CSo11UIResponder", "GameEngine"]
 - ["CSo11UIResponder", "GameScene"]
+- !private ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "Int64"]
 - !private ["CSo11UIResponder", "NSEC_PER_SEC"]
+- !private ["CSo11UIResponder", "NSUserDefaults"]
 - !private ["CSo11UIResponder", "SKSceneScaleMode"]
 - !private ["CSo11UIResponder", "SKView"]
+- !private ["CSo11UIResponder", "TickLevelOne"]
 - !private ["CSo11UIResponder", "UIDevice"]
 - ["CSo11UIResponder", "UIGestureRecognizer"]
 - !private ["CSo11UIResponder", "UIGestureRecognizerState"]
 - ["CSo11UIResponder", "UIInterfaceOrientationMask"]
+- ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UIPanGestureRecognizer"]
 - !private ["CSo11UIResponder", "UISwipeGestureRecognizer"]
 - !private ["CSo11UIResponder", "UITapGestureRecognizer"]
+- ["CSo11UIResponder", "UIView"]
+- !private ["CSo11UIResponder", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["CSo11UIResponder", "abs"]
 - !private ["CSo11UIResponder", "addPreviewShapeToGameScene"]
 - !private ["CSo11UIResponder", "animateCollapsingLines"]
@@ -1165,7 +1395,11 @@ depends-member:
 - ["CSo11UIResponder", "gameTick"]
 - ["CSo11UIResponder", "gestureRecognizer"]
 - ["CSo11UIResponder", "gestureRecognizerShouldBegin"]
+- ["CSo11UIResponder", "handleScoreChange"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "labelForHighScore"]
+- ["CSo11UIResponder", "labelForLevel"]
+- ["CSo11UIResponder", "labelForScore"]
 - !private ["CSo11UIResponder", "movePreviewShape"]
 - ["CSo11UIResponder", "movedFingers"]
 - !private ["CSo11UIResponder", "multipleTouchEnabled"]
@@ -1183,9 +1417,12 @@ depends-member:
 - ["CSo11UIResponder", "swipedFingers"]
 - ["CSo11UIResponder", "tappedView"]
 - !private ["CSo11UIResponder", "tetrisBlockSize"]
+- !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "tick"]
+- !private ["CSo11UIResponder", "tickLength"]
 - !private ["CSo11UIResponder", "userInteractionEnabled"]
 - !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewContainerForScene"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo16UIStateRestoring", "CGFloat"]
 - !private ["PSo16UIStateRestoring", "DISPATCH_TIME_NOW"]
@@ -1194,9 +1431,12 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "GameScene"]
 - !private ["PSo16UIStateRestoring", "Int64"]
 - !private ["PSo16UIStateRestoring", "NSEC_PER_SEC"]
+- !private ["PSo16UIStateRestoring", "NSUserDefaults"]
 - !private ["PSo16UIStateRestoring", "SKSceneScaleMode"]
+- !private ["PSo16UIStateRestoring", "TickLevelOne"]
 - !private ["PSo16UIStateRestoring", "UIDevice"]
 - !private ["PSo16UIStateRestoring", "UIGestureRecognizerState"]
+- !private ["PSo16UIStateRestoring", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo16UIStateRestoring", "abs"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dispatch_after"]
@@ -1213,7 +1453,11 @@ depends-member:
 - ["PSo16UIStateRestoring", "gameTick"]
 - ["PSo16UIStateRestoring", "gestureRecognizer"]
 - ["PSo16UIStateRestoring", "gestureRecognizerShouldBegin"]
+- ["PSo16UIStateRestoring", "handleScoreChange"]
 - ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "labelForHighScore"]
+- ["PSo16UIStateRestoring", "labelForLevel"]
+- ["PSo16UIStateRestoring", "labelForScore"]
 - ["PSo16UIStateRestoring", "movedFingers"]
 - ["PSo16UIStateRestoring", "nextShape"]
 - ["PSo16UIStateRestoring", "prefersStatusBarHidden"]
@@ -1224,6 +1468,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "tappedView"]
 - !private ["PSo16UIStateRestoring", "tetrisBlockSize"]
 - !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewContainerForScene"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "CGFloat"]
@@ -1233,9 +1478,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "GameScene"]
 - !private ["PSo18UITraitEnvironment", "Int64"]
 - !private ["PSo18UITraitEnvironment", "NSEC_PER_SEC"]
+- !private ["PSo18UITraitEnvironment", "NSUserDefaults"]
 - !private ["PSo18UITraitEnvironment", "SKSceneScaleMode"]
+- !private ["PSo18UITraitEnvironment", "TickLevelOne"]
 - !private ["PSo18UITraitEnvironment", "UIDevice"]
 - !private ["PSo18UITraitEnvironment", "UIGestureRecognizerState"]
+- !private ["PSo18UITraitEnvironment", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["PSo18UITraitEnvironment", "abs"]
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
@@ -1253,7 +1501,11 @@ depends-member:
 - ["PSo18UITraitEnvironment", "gameTick"]
 - ["PSo18UITraitEnvironment", "gestureRecognizer"]
 - ["PSo18UITraitEnvironment", "gestureRecognizerShouldBegin"]
+- ["PSo18UITraitEnvironment", "handleScoreChange"]
 - ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "labelForHighScore"]
+- ["PSo18UITraitEnvironment", "labelForLevel"]
+- ["PSo18UITraitEnvironment", "labelForScore"]
 - ["PSo18UITraitEnvironment", "movedFingers"]
 - !private ["PSo18UITraitEnvironment", "multipleTouchEnabled"]
 - ["PSo18UITraitEnvironment", "nextShape"]
@@ -1265,8 +1517,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "swipedFingers"]
 - ["PSo18UITraitEnvironment", "tappedView"]
 - !private ["PSo18UITraitEnvironment", "tetrisBlockSize"]
+- !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "userInteractionEnabled"]
 - !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewContainerForScene"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["OSC20UIUserInterfaceIdiom", "Phone"]
@@ -1276,6 +1530,7 @@ depends-member:
 - !private ["CSo6UIView", "deinit"]
 - !private ["CSo6UIView", "multipleTouchEnabled"]
 - !private ["CSo6UIView", "presentScene"]
+- !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "userInteractionEnabled"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
@@ -1285,17 +1540,23 @@ depends-member:
 - !private ["CSo16UIViewController", "Double"]
 - ["CSo16UIViewController", "GameEngine"]
 - ["CSo16UIViewController", "GameScene"]
+- !private ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "Int64"]
 - !private ["CSo16UIViewController", "NSEC_PER_SEC"]
+- !private ["CSo16UIViewController", "NSUserDefaults"]
 - !private ["CSo16UIViewController", "SKSceneScaleMode"]
 - !private ["CSo16UIViewController", "SKView"]
+- !private ["CSo16UIViewController", "TickLevelOne"]
 - !private ["CSo16UIViewController", "UIDevice"]
 - ["CSo16UIViewController", "UIGestureRecognizer"]
 - !private ["CSo16UIViewController", "UIGestureRecognizerState"]
 - ["CSo16UIViewController", "UIInterfaceOrientationMask"]
+- ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UIPanGestureRecognizer"]
 - !private ["CSo16UIViewController", "UISwipeGestureRecognizer"]
 - !private ["CSo16UIViewController", "UITapGestureRecognizer"]
+- ["CSo16UIViewController", "UIView"]
+- !private ["CSo16UIViewController", "USER_DEFAULT_KEY_HIGH_SCORE"]
 - !private ["CSo16UIViewController", "abs"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dispatch_after"]
@@ -1313,7 +1574,11 @@ depends-member:
 - ["CSo16UIViewController", "gameTick"]
 - ["CSo16UIViewController", "gestureRecognizer"]
 - ["CSo16UIViewController", "gestureRecognizerShouldBegin"]
+- ["CSo16UIViewController", "handleScoreChange"]
 - ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "labelForHighScore"]
+- ["CSo16UIViewController", "labelForLevel"]
+- ["CSo16UIViewController", "labelForScore"]
 - ["CSo16UIViewController", "movedFingers"]
 - ["CSo16UIViewController", "nextShape"]
 - ["CSo16UIViewController", "prefersStatusBarHidden"]
@@ -1324,9 +1589,16 @@ depends-member:
 - ["CSo16UIViewController", "tappedView"]
 - !private ["CSo16UIViewController", "tetrisBlockSize"]
 - !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewContainerForScene"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
 - !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
 - !private ["Ps10_ArrayType", "SubSequence"]
@@ -1334,10 +1606,14 @@ depends-member:
 - !private ["Ps10_ArrayType", "sprite"]
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps31_BuiltinFloatLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps19_CVarArgAlignedType", "IntegerLiteralType"]
 - !private ["Ps19_CVarArgAlignedType", "Stride"]
 - !private ["Ps19_CVarArgAlignedType", "init"]
@@ -1389,6 +1665,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "size"]
 - !private ["Ps12_Reflectable", "sprite"]
 - !private ["Ps12_Reflectable", "subscript"]
+- !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "userInteractionEnabled"]
 - !private ["Ps12_Reflectable", "x"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
@@ -1419,12 +1696,15 @@ depends-nominal:
 - !private "VSC7CGPoint"
 - !private "VSC6CGRect"
 - "Ps11CVarArgType"
+- !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - !private "Sd"
 - "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
 - !private "Ps23FloatLiteralConvertible"
 - !private "Ps17FloatingPointType"
 - !private "Ps16ForwardIndexType"
@@ -1438,6 +1718,8 @@ depends-nominal:
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
 - !private "Ps21IntegerArithmeticType"
@@ -1451,12 +1733,17 @@ depends-nominal:
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - !private "OSC21NSURLSessionTaskState"
+- !private "CSo14NSUserDefaults"
 - "Ps21NilLiteralConvertible"
 - !private "Ps13OptionSetType"
 - "Sq"
+- !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
@@ -1471,7 +1758,11 @@ depends-nominal:
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
 - !private "Vs5Slice"
+- !private "Ps10Streamable"
 - !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -1485,17 +1776,28 @@ depends-nominal:
 - "PSo27UIGestureRecognizerDelegate"
 - !private "OSC24UIGestureRecognizerState"
 - !private "VSC26UIInterfaceOrientationMask"
+- !private "CSo7UILabel"
 - "CSo11UIResponder"
 - "PSo16UIStateRestoring"
 - "PSo18UITraitEnvironment"
 - !private "OSC20UIUserInterfaceIdiom"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
 - !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps31_BuiltinFloatLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "Ps19_CVarArgAlignedType"
 - !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps24_DestructorSafeContainer"
@@ -1532,4 +1834,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "49ef746bb52b2d0a6a0402405366e01e"
+interface-hash: "97b3fcd0801fb7c6abe28b981e701d2b"

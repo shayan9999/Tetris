@@ -10,23 +10,23 @@ provides-member:
 - ["O6Tetris11Orientation", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "FloatLiteralType"
-- !private "numberOfColors"
-- "String"
-- !private "totalOrientations"
-- "CustomStringConvertible"
-- !private "StringLiteralType"
-- "Color"
 - !private "<"
-- !private "arc4random_uniform"
-- "Int"
-- !private "+"
-- "Orientation"
 - "IntegerLiteralType"
-- "Bool"
-- !private ">"
+- "Color"
 - !private "~="
 - "=="
+- "String"
+- !private "+"
+- !private "numberOfColors"
+- "Orientation"
+- !private "StringLiteralType"
+- "Int"
+- !private ">"
+- !private "totalOrientations"
+- "Bool"
+- "FloatLiteralType"
+- !private "arc4random_uniform"
+- "CustomStringConvertible"
 depends-member:
 - !private ["Ps22BidirectionalIndexType", "Distance"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]

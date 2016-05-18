@@ -67,6 +67,7 @@ class GameEngine {
             nextShape = fallingShape
             nextShape!.moveTo(PreviewColumn, row: PreviewRow)
             endGame()
+            restartGameDelayed()
             return (nil, nil)
         }
         
@@ -114,6 +115,7 @@ class GameEngine {
         return false
     }
     
+    // detects if any of the blocks in the current shape are touching any blocks that have settled down
     func detectTouch() -> Bool {
         guard let shape = fallingShape else {
             return false
@@ -132,6 +134,13 @@ class GameEngine {
         delegate?.gameDidEnd(self)
         score = 0
         level = 1
+    }
+    
+    func restartGameDelayed(){
+        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC)))
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            self.beginGame()
+        })
     }
     
     //MARK: - Game Scoring
@@ -164,12 +173,12 @@ class GameEngine {
 
         
         //TODO: scoring here + level up when functionality is added
-        //let pointsEarned = completedLines.count * PointsPerLine * level
-        //score += pointsEarned
-        //if score >= level * LevelThreshold {
-            //level += 1
-            //delegate?.gameDidLevelUp(self)
-        //}
+        let pointsEarned = completedLines.count * PointsPerLine * level
+        score += pointsEarned
+        if score >= level * LevelThreshold {
+            level += 1
+            delegate?.gameDidLevelUp(self)
+        }
         
         // Find blocks that will fall down because of removal of a line of blocks now
         var fallenBlocks = Array<Array<Block2D>>()
@@ -222,6 +231,7 @@ class GameEngine {
             shape.raiseShapeByOneRow()
             if detectIllegalPlacement() {
                 endGame()
+                restartGameDelayed()
             } else {
                 settleCurrentShape()
             }

@@ -10,33 +10,38 @@ provides-member:
 - ["C6Tetris10GameEngine", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "-"
-- "Array"
-- "Block2D"
-- !private "||"
-- "FloatLiteralType"
-- !private "BooleanLiteralType"
-- "Bool"
+- "GameEngine"
 - "Shape2D"
-- !private "totalTetrisColumns"
+- "TetrisBoard"
+- !private "+="
 - !private "&&"
 - !private "totalTetrisRows"
-- !private "tetrisStartingColumn"
-- "GameEngine"
-- !private "+"
-- "TetrisBoard"
-- !private "<"
-- !private "tetrisStartingRow"
-- !private ">"
-- !private "+="
-- "GameDelegate"
+- !private "..<"
+- "Bool"
+- !private "-"
 - !private ">="
+- !private "PointsPerLine"
+- "IntegerLiteralType"
+- !private "LevelThreshold"
 - !private "=="
 - !private "!="
-- !private "..<"
-- "IntegerLiteralType"
+- "FloatLiteralType"
+- !private "||"
+- !private "totalTetrisColumns"
+- "GameDelegate"
+- !private "BooleanLiteralType"
+- !private "*"
+- !private "tetrisStartingColumn"
+- !private "<"
+- !private ">"
+- !private "+"
+- "Array"
+- "Block2D"
+- !private "tetrisStartingRow"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
+- !private ["Ps9AnyObject", "LevelThreshold"]
+- !private ["Ps9AnyObject", "PointsPerLine"]
 - !private ["Ps9AnyObject", "PreviewColumn"]
 - !private ["Ps9AnyObject", "PreviewRow"]
 - !private ["Ps9AnyObject", "Shape2D"]
@@ -216,6 +221,8 @@ depends-member:
 - ["C6Tetris10GameEngine", "Block2D"]
 - ["C6Tetris10GameEngine", "Bool"]
 - ["C6Tetris10GameEngine", "GameDelegate"]
+- !private ["C6Tetris10GameEngine", "LevelThreshold"]
+- !private ["C6Tetris10GameEngine", "PointsPerLine"]
 - ["C6Tetris10GameEngine", "PreviewColumn"]
 - ["C6Tetris10GameEngine", "PreviewRow"]
 - ["C6Tetris10GameEngine", "Shape2D"]

@@ -1,0 +1,322 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Color"
+- "Orientation"
+provides-nominal:
+- "O6Tetris5Color"
+- "O6Tetris11Orientation"
+provides-member:
+- ["O6Tetris5Color", ""]
+- ["O6Tetris11Orientation", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "StringLiteralType"
+- !private "arc4random_uniform"
+- "String"
+- "Bool"
+- !private "numberOfColors"
+- !private "totalOrientations"
+- "Orientation"
+- "Int"
+- !private ">"
+- "IntegerLiteralType"
+- !private "+"
+- "Color"
+- "=="
+- !private "~="
+- "FloatLiteralType"
+- !private "<"
+- "CustomStringConvertible"
+depends-member:
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps22BidirectionalIndexType", "init"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- !private ["Ps11CVarArgType", "init"]
+- ["O6Tetris5Color", "Blue"]
+- ["O6Tetris5Color", "Color"]
+- !private ["O6Tetris5Color", "Int"]
+- ["O6Tetris5Color", "Orange"]
+- ["O6Tetris5Color", "Purple"]
+- ["O6Tetris5Color", "RawValue"]
+- ["O6Tetris5Color", "Red"]
+- ["O6Tetris5Color", "String"]
+- ["O6Tetris5Color", "Teal"]
+- ["O6Tetris5Color", "Yellow"]
+- !private ["O6Tetris5Color", "arc4random_uniform"]
+- ["O6Tetris5Color", "deinit"]
+- ["O6Tetris5Color", "description"]
+- ["O6Tetris5Color", "hashValue"]
+- ["O6Tetris5Color", "init"]
+- !private ["O6Tetris5Color", "numberOfColors"]
+- ["O6Tetris5Color", "randomColor"]
+- ["O6Tetris5Color", "rawValue"]
+- ["O6Tetris5Color", "spriteName"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps23CustomStringConvertible", "Blue"]
+- !private ["Ps23CustomStringConvertible", "Color"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- ["Ps23CustomStringConvertible", "Down"]
+- !private ["Ps23CustomStringConvertible", "Int"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- ["Ps23CustomStringConvertible", "Left"]
+- ["Ps23CustomStringConvertible", "Orange"]
+- !private ["Ps23CustomStringConvertible", "Orientation"]
+- ["Ps23CustomStringConvertible", "Purple"]
+- ["Ps23CustomStringConvertible", "RawValue"]
+- ["Ps23CustomStringConvertible", "Red"]
+- ["Ps23CustomStringConvertible", "Right"]
+- ["Ps23CustomStringConvertible", "Teal"]
+- ["Ps23CustomStringConvertible", "Up"]
+- ["Ps23CustomStringConvertible", "Yellow"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "arc4random_uniform"]
+- ["Ps23CustomStringConvertible", "description"]
+- ["Ps23CustomStringConvertible", "hashValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "numberOfColors"]
+- ["Ps23CustomStringConvertible", "rawValue"]
+- !private ["Ps23CustomStringConvertible", "spriteName"]
+- !private ["Ps23CustomStringConvertible", "totalOrientations"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- ["Ps9Equatable", "Blue"]
+- !private ["Ps9Equatable", "Color"]
+- !private ["Ps9Equatable", "Distance"]
+- ["Ps9Equatable", "Down"]
+- !private ["Ps9Equatable", "Int"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- ["Ps9Equatable", "Left"]
+- ["Ps9Equatable", "Orange"]
+- !private ["Ps9Equatable", "Orientation"]
+- ["Ps9Equatable", "Purple"]
+- ["Ps9Equatable", "RawValue"]
+- ["Ps9Equatable", "Red"]
+- ["Ps9Equatable", "Right"]
+- ["Ps9Equatable", "Teal"]
+- ["Ps9Equatable", "Up"]
+- ["Ps9Equatable", "Yellow"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "arc4random_uniform"]
+- ["Ps9Equatable", "description"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "numberOfColors"]
+- ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "spriteName"]
+- !private ["Ps9Equatable", "totalOrientations"]
+- ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- !private ["Ps16ForwardIndexType", "init"]
+- ["Ps8Hashable", "Blue"]
+- !private ["Ps8Hashable", "Color"]
+- !private ["Ps8Hashable", "Distance"]
+- ["Ps8Hashable", "Down"]
+- !private ["Ps8Hashable", "Int"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- ["Ps8Hashable", "Left"]
+- ["Ps8Hashable", "Orange"]
+- !private ["Ps8Hashable", "Orientation"]
+- ["Ps8Hashable", "Purple"]
+- ["Ps8Hashable", "RawValue"]
+- ["Ps8Hashable", "Red"]
+- ["Ps8Hashable", "Right"]
+- ["Ps8Hashable", "Teal"]
+- ["Ps8Hashable", "Up"]
+- ["Ps8Hashable", "Yellow"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "arc4random_uniform"]
+- ["Ps8Hashable", "description"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "numberOfColors"]
+- ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "spriteName"]
+- !private ["Ps8Hashable", "totalOrientations"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Si", "hashValue"]
+- !private ["Si", "init"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["Ps11IntegerType", "init"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["CSo8NSNumber", "deinit"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo7NSValue", "deinit"]
+- ["O6Tetris11Orientation", "Bool"]
+- ["O6Tetris11Orientation", "Down"]
+- !private ["O6Tetris11Orientation", "Int"]
+- ["O6Tetris11Orientation", "Left"]
+- ["O6Tetris11Orientation", "Orientation"]
+- ["O6Tetris11Orientation", "RawValue"]
+- ["O6Tetris11Orientation", "Right"]
+- ["O6Tetris11Orientation", "String"]
+- ["O6Tetris11Orientation", "Up"]
+- !private ["O6Tetris11Orientation", "arc4random_uniform"]
+- ["O6Tetris11Orientation", "deinit"]
+- ["O6Tetris11Orientation", "description"]
+- ["O6Tetris11Orientation", "hashValue"]
+- ["O6Tetris11Orientation", "init"]
+- ["O6Tetris11Orientation", "randomOrientation"]
+- ["O6Tetris11Orientation", "rawValue"]
+- ["O6Tetris11Orientation", "rotate"]
+- !private ["O6Tetris11Orientation", "totalOrientations"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Ps21RandomAccessIndexType", "init"]
+- !private ["Vs5Range", "deinit"]
+- ["Ps16RawRepresentable", "Blue"]
+- !private ["Ps16RawRepresentable", "Color"]
+- ["Ps16RawRepresentable", "Down"]
+- !private ["Ps16RawRepresentable", "Int"]
+- ["Ps16RawRepresentable", "Left"]
+- ["Ps16RawRepresentable", "Orange"]
+- !private ["Ps16RawRepresentable", "Orientation"]
+- ["Ps16RawRepresentable", "Purple"]
+- ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "Red"]
+- ["Ps16RawRepresentable", "Right"]
+- ["Ps16RawRepresentable", "Teal"]
+- ["Ps16RawRepresentable", "Up"]
+- ["Ps16RawRepresentable", "Yellow"]
+- !private ["Ps16RawRepresentable", "arc4random_uniform"]
+- ["Ps16RawRepresentable", "description"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- !private ["Ps16RawRepresentable", "numberOfColors"]
+- ["Ps16RawRepresentable", "rawValue"]
+- !private ["Ps16RawRepresentable", "spriteName"]
+- !private ["Ps16RawRepresentable", "totalOrientations"]
+- ["Ps16RawRepresentable", ""]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps17SignedIntegerType", "init"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Ps16SignedNumberType", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "hashValue"]
+- !private ["Ps10Strideable", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "init"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps12_IntegerType", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps22_RandomAccessAmbiguity", "init"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
+- !private ["Ps18_SignedIntegerType", "init"]
+depends-nominal:
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps11CVarArgType"
+- "O6Tetris5Color"
+- !private "Ps10Comparable"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "CSo8NSNumber"
+- !private "CSo8NSObject"
+- !private "CSo7NSValue"
+- "O6Tetris11Orientation"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
+interface-hash: "ca97e4b0de7303af626346f94991dc1b"

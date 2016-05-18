@@ -7,17 +7,17 @@ provides-member:
 - ["C6Tetris7Block2D", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- "CustomStringConvertible"
 - "Hashable"
 - "=="
-- "Color"
-- !private "^"
-- "CustomStringConvertible"
-- !private "StringLiteralType"
-- "Block2D"
-- !private "UnicodeScalarType"
-- "String"
-- "Int"
 - "SKSpriteNode"
+- "String"
+- "Color"
+- "Int"
+- !private "^"
+- "Block2D"
 depends-member:
 - !private ["Ps9AnyObject", "color"]
 - !private ["Ps9AnyObject", "column"]

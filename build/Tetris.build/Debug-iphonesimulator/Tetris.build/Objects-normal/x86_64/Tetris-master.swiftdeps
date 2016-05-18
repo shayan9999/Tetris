@@ -1,10 +1,10 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "5a2081bab5ab2baec9d4190a0e4302d3"
-build_time: [516846472, 603623000]
+build_time: [516918508, 203138000]
 inputs:
-  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/GameScene.swift": [516845240, 0]
+  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/GameScene.swift": [516879161, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/SShape2D.swift": [516784458, 0]
-  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/GameViewController.swift": [516846470, 0]
+  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/GameViewController.swift": [516880172, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/Shape2D.swift": [516804974, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/AppDelegate.swift": [516723840, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/Block2D.swift": [516777824, 0]
@@ -13,8 +13,8 @@ inputs:
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/Enums.swift": [516779269, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/TetrisBoard.swift": [516793540, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/LShape2D.swift": [516784202, 0]
-  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/GameEngine.swift": [516846259, 0]
-  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/Constants.swift": [516805519, 0]
+  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/GameEngine.swift": [516918508, 0]
+  "/Users/macbook/Workspace/Tetris/Tetris/Tetris/Constants.swift": [516879909, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/TShape2D.swift": [516782281, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/JShape2D.swift": [516784325, 0]
   "/Users/macbook/Workspace/Tetris/Tetris/Tetris/Square2D.swift": [516782078, 0]

@@ -10,17 +10,17 @@ import SpriteKit
 import UIKit
 
 
-let TickLevelOne        = NSTimeInterval(600);
-
 class GameScene: SKScene {
     
     //MARK: - Constants
-    var bgSprite: SKSpriteNode?
     let gameLayer       = SKNode()
     let shapeLayer      = SKNode()
-    let LayerPosition   = CGPoint(x: 6, y: -20)
+    let LayerPosition   = CGPoint(x: 4, y: -8)
     
     //MARK: - Variables
+    var bgSprite: SKSpriteNode?
+    //var backgroundMusic: SKAudioNode!
+
     var tick: (() -> ())? // function pointer - can be nil and should return nothing and take no parameters
     var tickLength  = TickLevelOne // tickLength which I will change based on time
     var lastTick: NSDate? // used in comparision to see when was the last tick
@@ -37,9 +37,9 @@ class GameScene: SKScene {
         
         super.init(size: size)
         anchorPoint = CGPointMake(0, 1.0)
-        bgSprite = SKSpriteNode(imageNamed: "background")
-        bgSprite!.anchorPoint = CGPointMake(0, 1.0)
-        self.addChild(bgSprite!)
+        //bgSprite = SKSpriteNode(imageNamed: "background")
+        //bgSprite!.anchorPoint = CGPointMake(0, 1.0)
+        //self.addChild(bgSprite!)
         
         self.addChild(gameLayer)
         
@@ -120,7 +120,7 @@ class GameScene: SKScene {
     // converts rows and columns into game world positions
     func getPointFromPosition(column: Int, row: Int) -> CGPoint{
         let xPosition = LayerPosition.x + (CGFloat(column) * tetrisBlockSize) + (tetrisBlockSize/2)
-        let yPosition = LayerPosition.y - (CGFloat(row) * tetrisBlockSize) + (tetrisBlockSize/2)
+        let yPosition = LayerPosition.y - (CGFloat(row) * tetrisBlockSize) //+ (tetrisBlockSize/4)
         
         return CGPointMake(xPosition, yPosition)
     }
@@ -146,7 +146,7 @@ class GameScene: SKScene {
             
             spriteForBlock.alpha = 0.0;
             
-            let moveAction  = SKAction.moveTo( self.getPointFromPosition(block.column, row: block.row), duration: NSTimeInterval(0.2))
+            let moveAction  = SKAction.moveTo( self.getPointFromPosition(block.column, row: block.row + 3), duration: NSTimeInterval(0.2))
             moveAction.timingMode   = SKActionTimingMode.EaseOut
             
             let fadeAction  = SKAction.fadeAlphaTo(0.7, duration: 0.4)
@@ -199,6 +199,15 @@ class GameScene: SKScene {
     func playSound(soundFileName: String) {
         runAction(SKAction.playSoundFileNamed(soundFileName, waitForCompletion: false))
     }
+    
+//    func startBackgroundMusic(){
+//        backgroundMusic = SKAudioNode(fileNamed: "theme0.mp3")
+//        addChild(backgroundMusic)
+//    }
+//    
+//    func stopBackgroundMusic(){
+//        backgroundMusic.runAction(SKAction.stop())
+//    }
     
     // Aniamtes removal of lines 
     //TODO: Work on animations on this
