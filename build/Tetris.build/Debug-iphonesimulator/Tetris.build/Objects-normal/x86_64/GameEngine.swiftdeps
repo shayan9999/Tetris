@@ -10,38 +10,33 @@ provides-member:
 - ["C6Tetris10GameEngine", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "GameEngine"
-- !private "tetrisStartingRow"
-- !private "..<"
-- !private "&&"
-- !private "*"
+- !private "-"
 - "Array"
-- !private "PointsPerLine"
-- !private "BooleanLiteralType"
-- !private "!="
-- !private "tetrisStartingColumn"
-- "FloatLiteralType"
-- !private "||"
-- !private "LevelThreshold"
 - "Block2D"
-- !private "totalTetrisRows"
-- !private "+"
-- !private ">"
-- "GameDelegate"
-- "IntegerLiteralType"
-- !private "=="
-- "Shape2D"
-- !private ">="
+- !private "||"
+- "FloatLiteralType"
+- !private "BooleanLiteralType"
 - "Bool"
+- "Shape2D"
+- !private "totalTetrisColumns"
+- !private "&&"
+- !private "totalTetrisRows"
+- !private "tetrisStartingColumn"
+- "GameEngine"
+- !private "+"
 - "TetrisBoard"
 - !private "<"
-- !private "-"
+- !private "tetrisStartingRow"
+- !private ">"
 - !private "+="
-- !private "totalTetrisColumns"
+- "GameDelegate"
+- !private ">="
+- !private "=="
+- !private "!="
+- !private "..<"
+- "IntegerLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
-- !private ["Ps9AnyObject", "LevelThreshold"]
-- !private ["Ps9AnyObject", "PointsPerLine"]
 - !private ["Ps9AnyObject", "PreviewColumn"]
 - !private ["Ps9AnyObject", "PreviewRow"]
 - !private ["Ps9AnyObject", "Shape2D"]
@@ -62,13 +57,16 @@ depends-member:
 - !private ["Ps9AnyObject", "nextShape"]
 - !private ["Ps9AnyObject", "raiseShapeByOneRow"]
 - !private ["Ps9AnyObject", "randomShape"]
+- !private ["Ps9AnyObject", "removeAllBlocks"]
+- !private ["Ps9AnyObject", "removeFromParent"]
 - !private ["Ps9AnyObject", "rotateClockwise"]
 - !private ["Ps9AnyObject", "rotateCounterClockwise"]
 - !private ["Ps9AnyObject", "row"]
 - !private ["Ps9AnyObject", "score"]
-- !private ["Ps9AnyObject", "settleShape"]
+- !private ["Ps9AnyObject", "settleCurrentShape"]
 - !private ["Ps9AnyObject", "shiftLeftByOneColumn"]
 - !private ["Ps9AnyObject", "shiftRightByOneColumn"]
+- !private ["Ps9AnyObject", "sprite"]
 - !private ["Ps9AnyObject", "subscript"]
 - !private ["Ps9AnyObject", "tetrisStartingColumn"]
 - !private ["Ps9AnyObject", "tetrisStartingRow"]
@@ -113,6 +111,7 @@ depends-member:
 - !private ["C6Tetris7Block2D", "column"]
 - !private ["C6Tetris7Block2D", "deinit"]
 - !private ["C6Tetris7Block2D", "row"]
+- !private ["C6Tetris7Block2D", "sprite"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
@@ -120,6 +119,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "Stride"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
+- !private ["Ps11CVarArgType", "removeFromParent"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -144,6 +144,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "removeFromParent"]
 - !private ["Ps28CustomDebugStringConvertible", "reverse"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -167,12 +168,14 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "moveTo"]
 - !private ["Ps23CustomStringConvertible", "raiseShapeByOneRow"]
 - !private ["Ps23CustomStringConvertible", "randomShape"]
+- !private ["Ps23CustomStringConvertible", "removeFromParent"]
 - !private ["Ps23CustomStringConvertible", "reverse"]
 - !private ["Ps23CustomStringConvertible", "rotateClockwise"]
 - !private ["Ps23CustomStringConvertible", "rotateCounterClockwise"]
 - !private ["Ps23CustomStringConvertible", "row"]
 - !private ["Ps23CustomStringConvertible", "shiftLeftByOneColumn"]
 - !private ["Ps23CustomStringConvertible", "shiftRightByOneColumn"]
+- !private ["Ps23CustomStringConvertible", "sprite"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "Generator"]
@@ -190,12 +193,14 @@ depends-member:
 - !private ["Ps9Equatable", "moveTo"]
 - !private ["Ps9Equatable", "raiseShapeByOneRow"]
 - !private ["Ps9Equatable", "randomShape"]
+- !private ["Ps9Equatable", "removeFromParent"]
 - !private ["Ps9Equatable", "reverse"]
 - !private ["Ps9Equatable", "rotateClockwise"]
 - !private ["Ps9Equatable", "rotateCounterClockwise"]
 - !private ["Ps9Equatable", "row"]
 - !private ["Ps9Equatable", "shiftLeftByOneColumn"]
 - !private ["Ps9Equatable", "shiftRightByOneColumn"]
+- !private ["Ps9Equatable", "sprite"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "Stride"]
@@ -211,8 +216,6 @@ depends-member:
 - ["C6Tetris10GameEngine", "Block2D"]
 - ["C6Tetris10GameEngine", "Bool"]
 - ["C6Tetris10GameEngine", "GameDelegate"]
-- !private ["C6Tetris10GameEngine", "LevelThreshold"]
-- !private ["C6Tetris10GameEngine", "PointsPerLine"]
 - ["C6Tetris10GameEngine", "PreviewColumn"]
 - ["C6Tetris10GameEngine", "PreviewRow"]
 - ["C6Tetris10GameEngine", "Shape2D"]
@@ -223,21 +226,21 @@ depends-member:
 - ["C6Tetris10GameEngine", "delegate"]
 - ["C6Tetris10GameEngine", "detectIllegalPlacement"]
 - ["C6Tetris10GameEngine", "detectTouch"]
-- ["C6Tetris10GameEngine", "dropShape"]
+- ["C6Tetris10GameEngine", "dropCurrentShape"]
 - ["C6Tetris10GameEngine", "endGame"]
 - ["C6Tetris10GameEngine", "fallingShape"]
+- ["C6Tetris10GameEngine", "getCompletedLines"]
 - ["C6Tetris10GameEngine", "init"]
-- ["C6Tetris10GameEngine", "letShapeFall"]
+- ["C6Tetris10GameEngine", "letCurrentShapeFall"]
 - ["C6Tetris10GameEngine", "level"]
-- ["C6Tetris10GameEngine", "moveShapeLeft"]
-- ["C6Tetris10GameEngine", "moveShapeRight"]
+- ["C6Tetris10GameEngine", "moveCurrentShapeLeft"]
+- ["C6Tetris10GameEngine", "moveCurrentShapeRight"]
 - ["C6Tetris10GameEngine", "newShape"]
 - ["C6Tetris10GameEngine", "nextShape"]
 - ["C6Tetris10GameEngine", "removeAllBlocks"]
-- ["C6Tetris10GameEngine", "removeCompletedLines"]
-- ["C6Tetris10GameEngine", "rotateShape"]
+- ["C6Tetris10GameEngine", "rotateCurrentShape"]
 - ["C6Tetris10GameEngine", "score"]
-- ["C6Tetris10GameEngine", "settleShape"]
+- ["C6Tetris10GameEngine", "settleCurrentShape"]
 - !private ["C6Tetris10GameEngine", "tetrisStartingColumn"]
 - !private ["C6Tetris10GameEngine", "tetrisStartingRow"]
 - !private ["C6Tetris10GameEngine", "totalTetrisColumns"]
@@ -257,11 +260,13 @@ depends-member:
 - !private ["Ps8Hashable", "moveTo"]
 - !private ["Ps8Hashable", "raiseShapeByOneRow"]
 - !private ["Ps8Hashable", "randomShape"]
+- !private ["Ps8Hashable", "removeFromParent"]
 - !private ["Ps8Hashable", "rotateClockwise"]
 - !private ["Ps8Hashable", "rotateCounterClockwise"]
 - !private ["Ps8Hashable", "row"]
 - !private ["Ps8Hashable", "shiftLeftByOneColumn"]
 - !private ["Ps8Hashable", "shiftRightByOneColumn"]
+- !private ["Ps8Hashable", "sprite"]
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
@@ -331,6 +336,10 @@ depends-member:
 - !private ["Ps16MutableSliceable", "init"]
 - !private ["Ps16MutableSliceable", "row"]
 - !private ["Ps16MutableSliceable", "subscript"]
+- !private ["PSo8NSCoding", "removeFromParent"]
+- !private ["PSo9NSCopying", "removeFromParent"]
+- !private ["CSo8NSObject", "removeFromParent"]
+- !private ["PSo16NSObjectProtocol", "removeFromParent"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
@@ -366,6 +375,8 @@ depends-member:
 - !private ["Vs29ReverseRandomAccessCollection", "_Element"]
 - !private ["Vs24ReverseRandomAccessIndex", "Distance"]
 - !private ["Vs24ReverseRandomAccessIndex", "_DisabledRangeIndex"]
+- !private ["CSo6SKNode", "removeFromParent"]
+- !private ["CSo12SKSpriteNode", "removeFromParent"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -406,6 +417,7 @@ depends-member:
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - !private ["C6Tetris11TetrisBoard", "init"]
 - !private ["C6Tetris11TetrisBoard", "subscript"]
+- !private ["CSo11UIResponder", "removeFromParent"]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
@@ -477,6 +489,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "append"]
 - !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "removeFromParent"]
 - !private ["Ps12_Reflectable", "reverse"]
 - !private ["Ps12_Reflectable", "row"]
 - !private ["Ps12_Reflectable", "subscript"]
@@ -523,6 +536,10 @@ depends-nominal:
 - !private "Ps16MutableIndexable"
 - !private "Vs12MutableSlice"
 - !private "Ps16MutableSliceable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
 - "Ps21NilLiteralConvertible"
 - "Sq"
 - !private "Ps21RandomAccessIndexType"
@@ -534,6 +551,8 @@ depends-nominal:
 - !private "Ps16ReverseIndexType"
 - !private "Vs29ReverseRandomAccessCollection"
 - !private "Vs24ReverseRandomAccessIndex"
+- !private "CSo6SKNode"
+- !private "CSo12SKSpriteNode"
 - !private "Ps12SequenceType"
 - !private "C6Tetris7Shape2D"
 - !private "Ps17SignedIntegerType"
@@ -541,6 +560,7 @@ depends-nominal:
 - !private "Vs5Slice"
 - !private "Ps10Strideable"
 - !private "C6Tetris11TetrisBoard"
+- !private "CSo11UIResponder"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
@@ -567,4 +587,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "2e749cbbba6fa42395f57bad28713e3d"
+interface-hash: "12fdd6759921770f6f8778d20e6a38d0"

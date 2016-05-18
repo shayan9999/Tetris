@@ -51,6 +51,9 @@ class GameScene: SKScene {
         shapeLayer.position = LayerPosition
         shapeLayer.addChild(gameArea)
         gameLayer.addChild(shapeLayer)
+        
+        // start game theme sound
+        runAction(SKAction.repeatActionForever(SKAction.playSoundFileNamed("theme0.mp3", waitForCompletion: true)))
     }
     
     //MARK: - Update functions
@@ -72,11 +75,11 @@ class GameScene: SKScene {
         
     }
     
-    func startTicking(){
+    func resumeGameTimer(){
         lastTick = NSDate()
     }
     
-    func stopTicking(){
+    func stopGameTimer(){
         lastTick = nil;
     }
     
@@ -192,5 +195,75 @@ class GameScene: SKScene {
             }
         }
     }
+    
+    func playSound(soundFileName: String) {
+        runAction(SKAction.playSoundFileNamed(soundFileName, waitForCompletion: false))
+    }
+    
+    // Aniamtes removal of lines 
+    //TODO: Work on animations on this
+    func animateCollapsingLines(linesToRemove: Array<Array<Block2D>>, fallenBlocks: Array<Array<Block2D>>, completion:() -> ()) {
+        
+        // how long need to wait before completion block
+        var timeTillCompletion: NSTimeInterval = 0
+        
+        
+        for (columnIdx, column) in fallenBlocks.enumerate() {
+            for (blockIdx, block) in column.enumerate() {
+                
+                let newPosition = self.getPointFromPosition(block.column, row: block.row)
+                let sprite = block.sprite!
+                
+                // setting up animation timing
+                let delay = (NSTimeInterval(columnIdx) * 0.05) + (NSTimeInterval(blockIdx) * 0.05)
+                let duration = NSTimeInterval(((sprite.position.y - newPosition.y) / tetrisBlockSize) * 0.1)
+                let moveAction = SKAction.moveTo(newPosition, duration: duration)
+                moveAction.timingMode = .EaseOut
+                sprite.runAction(
+                    SKAction.sequence([
+                        SKAction.waitForDuration(delay),
+                        moveAction]))
+                timeTillCompletion = max(timeTillCompletion, duration + delay)
+            }
+        }
+        
+        for rowToRemove in linesToRemove {
+            
+            for block in rowToRemove {
+                
+                // put some randomization in animatons
+                let randomRadius = CGFloat(UInt(arc4random_uniform(200) + 100))
+                let goLeft = arc4random_uniform(100) % 2 == 0
+                
+                var point = self.getPointFromPosition(block.column, row: block.row)
+                point = CGPointMake(point.x + (goLeft ? -randomRadius : randomRadius), point.y)
+                
+                let randomDuration = NSTimeInterval(arc4random_uniform(2)) + 0.5
+                
+                // add some rotations
+                var startAngle = CGFloat(M_PI)
+                var endAngle = startAngle * 2
+                if goLeft {
+                    endAngle = startAngle
+                    startAngle = 0
+                }
+                let archPath = UIBezierPath(arcCenter: point, radius: randomRadius, startAngle: startAngle, endAngle: endAngle, clockwise: goLeft)
+                let archAction = SKAction.followPath(archPath.CGPath, asOffset: false, orientToPath: true, duration: randomDuration)
+                archAction.timingMode = .EaseIn
+                let sprite = block.sprite!
+                
+                // make the blocks appear above other blocks so they dont hide
+                // behind blocks that will not be removed yet
+                sprite.zPosition = 100
+                sprite.runAction(
+                    SKAction.sequence(
+                        [SKAction.group([archAction, SKAction.fadeOutWithDuration(NSTimeInterval(randomDuration))]),
+                            SKAction.removeFromParent()]))
+            }
+        }
+        
+        runAction(SKAction.waitForDuration(timeTillCompletion), completion:completion)
+    }
+
    
 }

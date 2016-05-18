@@ -85,6 +85,7 @@ class GameEngine {
                 }
                 rowOfBlocks.append(block)
                 blockArray[column, row] = nil
+                block.sprite?.removeFromParent()
             }
             
             allBlocks.append(rowOfBlocks)
@@ -127,6 +128,7 @@ class GameEngine {
     }
     
     func endGame() {
+        removeAllBlocks();
         delegate?.gameDidEnd(self)
         score = 0
         level = 1
@@ -134,8 +136,9 @@ class GameEngine {
     
     //MARK: - Game Scoring
     
-    func removeCompletedLines() -> (linesRemoved: Array<Array<Block2D>>, fallenBlocks: Array<Array<Block2D>>) {
+    func getCompletedLines() -> (linesRemoved: Array<Array<Block2D>>, fallenBlocks: Array<Array<Block2D>>) {
         
+        // look through all the columns and find a row which has all columns filled
         var completedLines = Array<Array<Block2D>>()
         for row in (1..<totalTetrisRows).reverse() {
             var rowOfBlocks = Array<Block2D>()
@@ -154,22 +157,27 @@ class GameEngine {
             }
         }
         
-
+        // No lines completed return empty arrays tuple
         if completedLines.count == 0 {
             return ([], [])
         }
 
-        let pointsEarned = completedLines.count * PointsPerLine * level
-        score += pointsEarned
-        if score >= level * LevelThreshold {
-            level += 1
-            delegate?.gameDidLevelUp(self)
-        }
         
+        //TODO: scoring here + level up when functionality is added
+        //let pointsEarned = completedLines.count * PointsPerLine * level
+        //score += pointsEarned
+        //if score >= level * LevelThreshold {
+            //level += 1
+            //delegate?.gameDidLevelUp(self)
+        //}
+        
+        // Find blocks that will fall down because of removal of a line of blocks now
         var fallenBlocks = Array<Array<Block2D>>()
+        
         for column in 0..<totalTetrisColumns {
             var fallenBlocksArray = Array<Block2D>()
-
+            
+            // start from bottom
             for row in (1..<completedLines[0][0].row).reverse() {
                 guard let block = blockArray[column, row] else {
                     continue
@@ -179,7 +187,7 @@ class GameEngine {
                     newRow += 1
                 }
                 block.row = newRow
-                blockArray[column, row] = nil
+                blockArray[column, row] = nil // there cant be anything new coming down so set it to nil
                 blockArray[column, newRow] = block
                 fallenBlocksArray.append(block)
             }
@@ -189,11 +197,11 @@ class GameEngine {
         }
         return (completedLines, fallenBlocks)
     }
-    
+        
     //MARK: - Game Movements
     
     // used to drop the shape to the bottom
-    func dropShape() {
+    func dropCurrentShape() {
         guard let shape = fallingShape else {
             return
         }
@@ -205,7 +213,7 @@ class GameEngine {
     }
     
     // this will be called in every frame. The shape on screen falls on row every tick
-    func letShapeFall() {
+    func letCurrentShapeFall() {
         guard let shape = fallingShape else {
             return
         }
@@ -215,17 +223,17 @@ class GameEngine {
             if detectIllegalPlacement() {
                 endGame()
             } else {
-                settleShape()
+                settleCurrentShape()
             }
         } else {
             delegate?.gameShapeDidMove(self)
             if detectTouch() {
-                settleShape()
+                settleCurrentShape()
             }
         }
     }
     
-    func rotateShape() {
+    func rotateCurrentShape() {
         guard let shape = fallingShape else {
             return
         }
@@ -237,7 +245,7 @@ class GameEngine {
         delegate?.gameShapeDidMove(self)
     }
     
-    func moveShapeLeft() {
+    func moveCurrentShapeLeft() {
         guard let shape = fallingShape else {
             return
         }
@@ -249,7 +257,7 @@ class GameEngine {
         delegate?.gameShapeDidMove(self)
     }
     
-    func moveShapeRight() {
+    func moveCurrentShapeRight() {
         guard let shape = fallingShape else {
             return
         }
@@ -261,7 +269,7 @@ class GameEngine {
         delegate?.gameShapeDidMove(self)
     }
     
-    func settleShape() {
+    func settleCurrentShape() {
         guard let shape = fallingShape else {
             return
         }

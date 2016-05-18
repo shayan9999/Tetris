@@ -136,15 +136,17 @@ SWIFT_CLASS("_TtC6Tetris9GameScene")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aCoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (void)update:(CFTimeInterval)currentTime;
-- (void)startTicking;
-- (void)stopTicking;
+- (void)resumeGameTimer;
+- (void)stopGameTimer;
 - (CGPoint)getPointFromPosition:(NSInteger)column row:(NSInteger)row;
+- (void)playSound:(NSString * _Nonnull)soundFileName;
 @end
 
+@class UIGestureRecognizer;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC6Tetris18GameViewController")
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) GameScene * _Null_unspecified gameScene;
 - (void)viewDidLoad;
 - (void)gameTick;
@@ -153,6 +155,11 @@ SWIFT_CLASS("_TtC6Tetris18GameViewController")
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations;
 - (void)didReceiveMemoryWarning;
 - (BOOL)prefersStatusBarHidden;
+- (IBAction)tappedView:(id _Nonnull)sender;
+- (IBAction)movedFingers:(id _Nonnull)sender;
+- (IBAction)swipedFingers:(id _Nonnull)sender;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer * _Nonnull)otherGestureRecognizer;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer * _Nonnull)otherGestureRecognizer;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
